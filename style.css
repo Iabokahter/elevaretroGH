@@ -1,7 +1,7 @@
 /* --- المتغيرات العامة للمشروع --- */
 :root {
-  --font-logo: "Cinzel", serif;
-  --font-subtitle: "Inter", sans-serif;
+  --font-logo: "POI Carbonic Trial", sans-serif;
+  --font-subtitle: "POI Carbonic Trial", sans-serif;
   --color-text-light: #ffffff;
   --color-footer-bg: #c3c3b7;
   --color-icon-circle-bg: rgba(255, 255, 255, 0.25);
@@ -11,6 +11,12 @@
 
   --background-image-url: url("./images/commingSoon.png");
 }
+
+
+* {
+  cursor: url('./art/SVG/cursor.svg'), auto;
+}
+
 @media (min-width: 1400px) {
   .container,
   .container-lg,
@@ -62,6 +68,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: "POI Carbonic Trial", sans-serif;
 }
 
 swiper-container {
@@ -499,7 +506,7 @@ section.innerServices .text ul {
   width: 60px;
   height: 60px;
   border-radius: 8px;
-  cursor: pointer;
+  cursor: url('art/1x/Asset 1.png') 16 16,auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -597,7 +604,7 @@ section.innerServices .text ul {
   border: none;
   padding: 12px 30px;
   font-size: 14px;
-  cursor: pointer;
+  cursor: url('art/1x/Asset 1.png') 16 16,auto;
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -661,7 +668,7 @@ section.innerServices .text ul {
   background: none;
   border: none;
   color: #999;
-  cursor: pointer;
+  cursor: url('art/1x/Asset 1.png') 16 16,auto;
   font-size: 18px;
 }
 
@@ -1146,7 +1153,7 @@ textarea.form-control {
   border: none;
   color: #333;
   font-size: 14px;
-  cursor: pointer;
+  cursor: url('art/1x/Asset 1.png') 16 16,auto;
   padding: 0;
   text-decoration: underline;
   margin-top: 20px;
@@ -1182,20 +1189,27 @@ textarea.form-control {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2px;
-  margin-bottom: 30px;
+  gap: 10px;
+  height: 400px;
+  width: 75%;
+  margin: 0 auto;
+  border-spacing: 0;
 }
 
 .about-image {
   position: relative;
-  height: 300px;
+  height: 100%;
   overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 .about-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
 }
@@ -1208,7 +1222,9 @@ textarea.form-control {
   margin-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 80px;
+  gap: 10px;
+  width: 75%;
+  margin: 10px auto 0;
 }
 
 .text-block {
@@ -1230,28 +1246,28 @@ textarea.form-control {
   font-weight: 400;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1768px) {
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 0px;
   }
 
   .about-image {
-    height: 250px;
+    height: 125110px;
   }
 
   .about-text {
     grid-template-columns: 1fr;
-    gap: 40px;
-    margin-top: 40px;
+    gap: 0px;
+    margin-top: 0px;
   }
 
   #about {
-    padding: 60px 20px;
+    padding: 1px 20px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 14s80px) {
   .about-text {
     gap: 30px;
   }
