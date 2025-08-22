@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Smooth Handover & Beyond</title>
+
+    <!-- Google Fonts: Cinzel for the logo, Inter for the subtitle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body class="homepage">
+    <header class="mainHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="navbarHeader">
+                        <div class="logo">
+                            <a href="/">
+                                <img src="../images/logo.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="menu">
+                            <ul>
+                                <li>
+                                    <a href="">COMMUNITY</a>
+                                </li>
+                                <li>
+                                    <a href="" class="aboutSection">ABOUT</a>
+                                </li>
+                                <li>
+                                    <a href="../portfolio.html">PORTFOILO</a>
+                                </li>
+                                <li>
+                                    <a href="../index.html#services">SERVICES</a>
+                                </li>
+                                <li>
+                                    <a href=""class="contactSection"> CONTACT US</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="innerServices">
+        <img src="../images/building2.jpg" alt="img-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text">
+                        <h1> Smooth Handover & Beyond</h1>
+                        <p>
+                            Complete final inspections and resolve all snags.  <br>
+                            Deliver accurate as-built drawings and full technical documentation.  <br>
+                            Prepare the facility for immediate,operational use.  <br>
+                            Provide warranty services an posthandover client support.
+                        </p>
+                    </div>
+                    <div class="spicealText">
+                        <p>Elevate your space beyond limits</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+<script>
+        const aboutHeaderBtn = document.querySelector('.aboutSection');
+        const contactHeaderBtn = document.querySelector('.contactSection');
+
+        if (aboutHeaderBtn) {
+            aboutHeaderBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.location.href = '../index.html?section=about';
+            });
+        }
+
+        if (contactHeaderBtn) {
+            contactHeaderBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.location.href = '../index.html?section=contact';
+            });
+        }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | ELEVARETRO</title>
+
+    <!-- Google Fonts: Cinzel for the logo, Inter for the subtitle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body class="homepage">
+    <header class="mainHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="navbarHeader">
+                        <div class="logo">
+                            <a href="/">
+                                <img src="./images/logo.png" alt="logo">
+                            </a>
+                        </div>
+                        <div class="menu">
+                            <button class="hamburger-btn" id="hamburgerBtn">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="menu-content">
+            <div class="menu-left">
+                <div class="contact-info">
+                    <div class="infoItem">
+                        <h4>E-mail</h4>
+                        <a href="mailto:elevaretro.com">elevaretro.com</a>
+                    </div>
+                    <div class="infoItem">
+                        <h4>Careers</h4>
+                        <a href="mailto:hr@elevaretro.com">hr@elevaretro.com</a>
+                    </div>
+
+                    <div class="infoItem">
+                        <h4>Address</h4>
+                        <a href="www.googlemaps.com" target="_blank">KSA - Jeddah</a>
+                    </div>
+                </div>
+
+                <div class="menu-description">
+                    For each project the approach rests on a careful understanding of the space, or the site's.
+                </div>
+
+                <button class="send-request-btn">SEND REQUEST</button>
+            </div>
+
+            <div class="menu-right">
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="#">COMMUNITY</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">PORTFOLIO</a></li>
+                        <li><a href="#">SERVICES</a></li>
+                        <li><a href="#">COMMUNITY</a></li>
+                    </ul>
+                </nav>
+
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search">
+                    <button class="search-btn">🔍</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="portfolio">
+        <img src="./images/building4.jpg" class="portfolioImage" alt="portfolio image">
+        <ul class="portfolioList">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li>
+                <a href="./portfolio/jetAvation.html">
+                    <h2>Jet Avaition - Project</h2>
+                    <div>
+                        <span>
+                            details
+                        </span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="./portfolio/jetAvation.html">
+                    <h2>IMC - Project</h2>
+                    <div>
+                        <span>
+                            details
+                        </span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="./portfolio/jetAvation.html">
+                    <h2>SGN - Project</h2>
+                    <div>
+                        <span>
+                            details
+                        </span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </li>
+            <li></li>
+            <li>
+                <a href="./portfolio/jetAvation.html">
+                    <h2>CMS - Project</h2>
+                    <div>
+                        <span>
+                            details
+                        </span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="./portfolio/jetAvation.html">
+                    <h2>Leylaty Group - Project</h2>
+                    <div>
+                        <span>
+                            details
+                        </span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="./portfolio/jetAvation.html">
+                    <h2>Mashari Villa - Project</h2>
+                    <div>
+                        <span>
+                            details
+                        </span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mainHeader = document.querySelector('.mainHeader');
+
+        // Toggle menu with hamburger button
+        hamburgerBtn.addEventListener('click', function () {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+
+            // Add or remove menuOpen class from mainHeader
+            if (mainHeader) {
+                mainHeader.classList.toggle('menuOpen');
+            }
+        });
+
+        // Close menu when clicking outside
+        mobileMenu.addEventListener('click', function (event) {
+            if (event.target === mobileMenu) {
+                hamburgerBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+
+                // Remove menuOpen class when closing
+                if (mainHeader) {
+                    mainHeader.classList.remove('menuOpen');
+                }
+            }
+        });
+
+        // Close with Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                hamburgerBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+
+                // Remove menuOpen class when closing
+                if (mainHeader) {
+                    mainHeader.classList.remove('menuOpen');
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
