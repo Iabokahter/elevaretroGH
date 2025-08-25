@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | ELEVARETRO</title>
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+
+    <!-- PNG favicon (recommended for better quality) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo.png">
+
+    <!-- Apple touch icon (for iOS devices) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/logo.png">
+
+    <!-- Android/Chrome -->
+    <link rel="manifest" href="./images/logo.png">
+    <!-- Google Fonts: Cinzel for the logo, Inter for the subtitle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body class="homepage">
+
+    <!-- Page Transition Overlay -->
+    <div class="page-transition" id="pageTransition">
+        <div class="transition-content">
+            <div class="transition-logo">
+                <div class="logo-container">
+                    <div class="logo"><img src="./images/logo.png" alt="logo"></div>
+                </div>
+            </div>
+            <!-- <div class="loading-spinner"></div> -->
+        </div>
+    </div>
+
+    <!-- Page 1 -->
+    <div class="page page-1" id="page1">
+        <header class="mainHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="navbarHeader">
+                            <div class="logo">
+                                <a href="/">
+                                    <img src="./images/logo.png" alt="logo">
+                                </a>
+                            </div>
+                            <div class="menu">
+                                <button class="hamburger-btn" id="hamburgerBtn">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="menu-content">
+                <div class="menu-left">
+                    <div class="contact-info">
+                        <div class="infoItem">
+                            <h4>E-mail</h4>
+                            <a href="mailto:elevaretro.com">elevaretro.com</a>
+                        </div>
+                        <div class="infoItem">
+                            <h4>Careers</h4>
+                            <a href="mailto:hr@elevaretro.com">hr@elevaretro.com</a>
+                        </div>
+
+                        <div class="infoItem">
+                            <h4>Address</h4>
+                            <a href="www.googlemaps.com" target="_blank">KSA - Jeddah</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-description">
+                        For each project the approach rests on a careful understanding of the space, or the site's.
+                    </div>
+
+                    <button class="send-request-btn">SEND REQUEST</button>
+                </div>
+
+                <div class="menu-right">
+                    <nav>
+                        <ul class="nav-menu">
+                            <li><a href="./index.html">COMMUNITY</a></li>
+                            <li><a href="./index.html">ABOUT</a></li>
+                            <li><a href="./portfolio.html">PORTFOLIO</a></li>
+                            <li><a href="./index.html">SERVICES</a></li>
+                            <li><a href="./contact.html">CONTACT US</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <section class="innerServices contact">
+            <img src="./art/4x/service1@4x.png" alt="img-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="spicealText">
+                            <h1>CONTACT</h1>
+                            <p>Everygreat project starts with a <br>
+                                conversation</p>
+                            <a class="btn btn-2 hover-slide-right m-0" onclick="navigateToPage('page2', 'slide-left')">
+                                <span>GET IN TOUCH</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Page 2 -->
+    <div class="page page-2 hidden" id="page2">
+        <header class="mainHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="navbarHeader">
+                            <div class="logo">
+                                <a href="/">
+                                    <img src="../images/logo.png" alt="logo">
+                                </a>
+                            </div>
+                            <div class="menu">
+                                <ul>
+                                    <li>
+                                        <a href="">COMMUNITY</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="aboutSection">ABOUT</a>
+                                    </li>
+                                    <li>
+                                        <a href="../portfolio.html">PORTFOILO</a>
+                                    </li>
+                                    <li>
+                                        <a href="../index.html#services">SERVICES</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="contactSection"> CONTACT US</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="innerServices contactForm">
+            <img src="./images/building1.jpg" alt="img-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>
+                            Your next project starts <br>
+                            here !
+                        </h1>
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="name">First Name & Last Name</label>
+                                <input type="text" class="form-control" placeholder="Enter username" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="text" class="form-control" placeholder="Enter your email" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <input type="text" class="form-control" placeholder="Comment" id="description">
+                            </div>
+                            <button class="btn btn-2 hover-slide-right" type="submit">
+                                <span>SEND REQUEST</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script>
+        let isTransitioning = false;
+
+        function navigateToPage(targetPageId, transitionType = 'slide') {
+            if (isTransitioning) return; // Prevent multiple clicks
+
+            isTransitioning = true;
+            const transition = document.getElementById('pageTransition');
+            const currentPage = document.querySelector('.page:not(.hidden)');
+            const targetPage = document.getElementById(targetPageId);
+
+            // Reset any existing classes
+            transition.className = `page-transition ${transitionType}`;
+
+            // Start the slide animation by adding active
+            setTimeout(() => {
+                transition.classList.add('active');
+            }, 10);
+
+            // Switch pages when slide is in center
+            setTimeout(() => {
+                // Hide all pages
+                document.querySelectorAll('.page').forEach(page => {
+                    page.classList.add('hidden');
+                });
+                // Show target page
+                targetPage.classList.remove('hidden');
+            }, 300);
+
+            // Continue sliding to complete the transition
+            setTimeout(() => {
+                transition.classList.add('slide-out');
+
+                // Reset everything after animation completes
+                setTimeout(() => {
+                    transition.classList.remove('active', 'slide-out');
+                    isTransitioning = false;
+                }, 600);
+            }, 600);
+        }
+
+        // For actual website integration with real URLs
+        function setupPageTransitions() {
+            // Intercept all internal links
+            document.addEventListener('click', function (e) {
+                const link = e.target.closest('a[href^="/"], a[href^="./"], a[href^="../"]');
+
+                if (link && !link.hasAttribute('data-no-transition')) {
+                    e.preventDefault();
+                    const href = link.getAttribute('href');
+
+                    // Start transition
+                    const transition = document.getElementById('pageTransition');
+                    transition.classList.add('active');
+
+                    // Navigate after transition
+                    setTimeout(() => {
+                        window.location.href = href;
+                    }, 800);
+                }
+            });
+
+            // Handle back/forward browser navigation
+            window.addEventListener('pageshow', function (event) {
+                if (event.persisted) {
+                    // Page loaded from cache (back/forward)
+                    const transition = document.getElementById('pageTransition');
+                    transition.classList.remove('active', 'slide-out');
+                }
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function () {
+            // setupPageTransitions(); // Uncomment for real website
+        });
+    </script>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mainHeader = document.querySelector('.mainHeader');
+
+        // Toggle menu with hamburger button
+        hamburgerBtn.addEventListener('click', function () {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+
+            // Add or remove menuOpen class from mainHeader
+            if (mainHeader) {
+                mainHeader.classList.toggle('menuOpen');
+            }
+        });
+
+        // Close menu when clicking outside
+        mobileMenu.addEventListener('click', function (event) {
+            if (event.target === mobileMenu) {
+                hamburgerBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+
+                // Remove menuOpen class when closing
+                if (mainHeader) {
+                    mainHeader.classList.remove('menuOpen');
+                }
+            }
+        });
+
+        // Close with Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                hamburgerBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+
+                // Remove menuOpen class when closing
+                if (mainHeader) {
+                    mainHeader.classList.remove('menuOpen');
+                }
+            }
+        });
+    </script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // animation duration
+            once: false     // false = animate every time you scroll up/down
+        });
+    </script>
+</body>
+
+</html>

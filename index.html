@@ -5,6 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | ELEVARETRO</title>
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+
+    <!-- PNG favicon (recommended for better quality) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo.png">
+
+    <!-- Apple touch icon (for iOS devices) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/logo.png">
+
+    <!-- Android/Chrome -->
+    <link rel="manifest" href="./images/logo.png">
     <script type="text/javascript" src="https://livejs.com/live.js"></script>
 
     <!-- Google Fonts: Cinzel for the logo, Inter for the subtitle -->
@@ -14,6 +26,8 @@
         rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="./style.css">
@@ -21,314 +35,403 @@
 </head>
 
 <body class="homepage">
-    <header class="mainHeader">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="navbarHeader">
-                        <div class="logo">
-                            <a href="/">
-                                <img src="./images/logo.png" alt="logo">
-                            </a>
-                        </div>
-                        <div class="menu">
-                            <ul>
-                                <li>
-                                    <a href="">COMMUNITY</a>
-                                </li>
-                                <li>
-                                    <a href="" class="aboutSection">ABOUT</a>
-                                </li>
-                                <li>
-                                    <a href="./portfolio.html">PORTFOILO</a>
-                                </li>
-                                <li>
-                                    <a href="#services">SERVICES</a>
-                                </li>
-                                <li>
-                                    <a href="" class="contactSection"> CONTACT US</a>
-                                </li>
-                            </ul>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="logo-container">
+            <div class="logo"><img src="./images/logo.png" alt="logo"></div>
+        </div>
+        <!-- <div class="loading-text">Loading...</div> -->
+    </div>
+
+    <div class="main-content" id="mainContent">
+        <header class="mainHeader innerGreenFixed">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="navbarHeader">
+                            <div class="logo">
+                                <a href="/index.html">
+                                    <img src="../images/logo.png" alt="logo">
+                                    <img src="./images/greenLogo.png" class="greenLogo" alt="logo">
+                                </a>
+                            </div>
+                            <div class="menu">
+                                <ul>
+                                    <li>
+                                        <a href="">COMMUNITY</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="aboutSection">ABOUT</a>
+                                    </li>
+                                    <li>
+                                        <a href="../portfolio.html">PORTFOILO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#services">SERVICES</a>
+                                    </li>
+                                    <li>
+                                        <a href="./contact.html">CONTACT US</a>
+                                    </li>
+                                </ul>
+                                <button class="hamburger-btn" id="hamburgerBtn">
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <section class="hero" id="hero">
-        <swiper-container class="mySwiper" pagination="true" pagination-type="fraction">
-            <swiper-slide>
-                <div class="slideContent">
-                    <img src="art/SVG/Asset%204.svg">
-                    
-                    <ul>
-                        <li>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="menu-content">
+                <div class="menu-left">
+                    <div class="contact-info">
+                        <div class="infoItem" data-aos="fade-right" data-aos-delay="300">
+                            <h4>E-mail</h4>
+                            <a href="mailto:elevaretro.com">elevaretro.com</a>
+                        </div>
+                        <div class="infoItem">
+                            <h4>Careers</h4>
+                            <a href="mailto:hr@elevaretro.com">hr@elevaretro.com</a>
+                        </div>
+
+                        <div class="infoItem">
+                            <h4>Address</h4>
+                            <a href="www.googlemaps.com" target="_blank">KSA - Jeddah</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-description">
+                        For each project the approach rests on a careful understanding of the space, or the site's.
+                    </div>
+
+                    <button class="btn btn-2 hover-slide-right">
+                        <span>SEND REQUEST</span>
+                    </button>
+                </div>
+
+                <div class="menu-right">
+                    <nav>
+                        <ul class="nav-menu">
+                            <li>
+                                <a href="">COMMUNITY</a>
+                            </li>
+                            <li>
+                                <a href="" class="aboutSection">ABOUT</a>
+                            </li>
+                            <li>
+                                <a href="../portfolio.html">PORTFOILO</a>
+                            </li>
+                            <li>
+                                <a href="#services">SERVICES</a>
+                            </li>
+                            <li>
+                                <a href="./contact.html">CONTACT US</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <section class="hero" id="hero">
+
+            <div class="slider">
+                <!-- Controls -->
+                <div class="controls">
+                    <div class="arrow" id="prev"></div>
+                    <div class="arrow" id="next"></div>
+                </div>
+                <div class="pagenationControls">
+                    <span class="pagination">
+                        <span id="current">01</span>
+                        <span id="divider">/</span>
+                        <span id="total">03</span>
+                    </span>
+                </div>
+
+                <!-- Content above images -->
+                <div data-aos="fade-right" data-aos-delay="300" class="slideContent">
+                    <img src="./images/heroLogo.png">
+
+                    <ul data-aos="fade-right" data-aos-delay="900">
+                        <li data-aos="fade-right" data-aos-delay="300">
                             Space
                         </li>
-                        <li>
+                        <li data-aos="fade-right" data-aos-delay="600">
                             Transformation
                         </li>
-                        <li>
+                        <li data-aos="fade-right" data-aos-delay="900">
                             Experience
                         </li>
                     </ul>
                 </div>
-                <img src="./art/1x/Asset%202.png" alt="image">
-            </swiper-slide>
-                
-        </swiper-container>
-        <ul class="socialIcons">
-            <li>
-                <a href="#" target="_blank">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-            </li>
-        </ul>
-        <div class="heroModel">
-            <div class="sectionLinks">
-                <button class="link" id="forAbout">
-                    <i class="fa-solid fa-chevron-down arrowLinks"></i>
-                    About Us
-                </button>
 
-                <button class="link" id="forContact">
-                    <i class="fa-solid fa-chevron-down arrowLinks"></i>
-                    CONTACT US
-                </button>
+                <!-- Slides -->
+                <div class="slide active" style="background-image: url('./art/1x/Asset%202.png');"></div>
+                <div class="slide" style="background-image: url('./images/building1.jpg');"></div>
+                <div class="slide" style="background-image: url('./images/building2.jpg');"></div>
             </div>
-            <div id="about" class="content">
-                <div class="about-container">
-                    <!-- Images Grid -->
-                    <div class="about-grid">
-                        <div class="about-image">
-                            <img src="./art/1x/Asset 8.png" 
-                                alt="Architecture detail">
-                        </div>
-                        <div class="about-image">
-                            <img src="./art/1x/Asset 9.png"
-                                alt="Professional work">
-                        </div>
-                        <div class="about-image">
-                            <img src="./art/1x/Asset 10.png"
-                                alt="Modern architecture">
-                        </div>
-                    </div>
+            <ul class="socialIcons">
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+            <div class="heroModel">
+                <div class="sectionLinks">
+                    <button class="link" id="forAbout">
+                        <i class="fa-solid fa-chevron-down arrowLinks"></i>
+                        BUILT ON VISION
+                    </button>
 
-                    <!-- Text Content -->
-                    <div class="about-text">
-                        <div class="text-block">
-                            <div class="text-title">Soulful Craftsmanship:</div>
-                            <div class="text-content">
-                                Delivering spaces that resonate with meaning, purpose, and genuine connection.
+                    <button class="link" id="forContact">
+                        <i class="fa-solid fa-chevron-down arrowLinks"></i>
+                        CONTACT US
+                    </button>
+                </div>
+                <div id="about" class="content">
+                    <div class="about-container">
+                        <!-- Images Grid -->
+                        <div class="about-grid">
+                            <div class="about-image">
+                                <img src="./art/1x/Asset 8.png" alt="Architecture detail">
+                            </div>
+                            <div class="about-image">
+                                <img src="./art/1x/Asset 9.png" alt="Professional work">
+                            </div>
+                            <div class="about-image">
+                                <img src="./art/1x/Asset 10.png" alt="Modern architecture">
                             </div>
                         </div>
 
-                        <div class="text-block">
-                            <div class="text-title">Enduring Trust:</div>
-                            <div class="text-content">
-                                Building trust through transparency, consistency, and unwavering commitment.
+                        <!-- Text Content -->
+                        <div class="about-text">
+                            <div class="text-block">
+                                <div class="text-title">Soulful Craftsmanship:</div>
+                                <div class="text-content">
+                                    Delivering spaces that resonate with meaning, purpose, and genuine connection.
+                                </div>
+                            </div>
+
+                            <div class="text-block">
+                                <div class="text-title">Enduring Trust:</div>
+                                <div class="text-content">
+                                    Building trust through transparency, consistency, and unwavering commitment.
+                                </div>
+                            </div>
+
+                            <div class="text-block">
+                                <div class="text-title">Relentless Refinement:</div>
+                                <div class="text-content">
+                                    Continuously improving processes, standards, and skills.
+                                </div>
                             </div>
                         </div>
 
-                        <div class="text-block">
-                            <div class="text-title">Relentless Refinement:</div>
-                            <div class="text-content">
-                                Continuously improving processes, standards, and skills.
+                        <div class="about-text">
+                            <div class="text-block">
+                                <div class="text-title">Purposeful Precision:</div>
+                                <div class="text-content">
+                                    Every decision and detail serves the project's deep engagement with clients and
+                                    stakeholders.
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="about-text">
-                        <div class="text-block">
-                            <div class="text-title">Purposeful Precision:</div>
-                            <div class="text-content">
-                                Every decision and detail serves the project's deep engagement with clients and
-                                stakeholders.
+                            <div class="text-block">
+                                <div class="text-title">Collaborative Innovation:</div>
+                                <div class="text-content">
+                                    Fostering creative collaboration and innovative solutions.
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="text-block">
-                            <div class="text-title">Collaborative Innovation:</div>
-                            <div class="text-content">
-                                Fostering creative collaboration and innovative solutions.
-                            </div>
-                        </div>
-
-                        <div class="text-block">
-                            <div class="text-title">Respectful Precision:</div>
-                            <div class="text-content">
-                                Every decision and detail serves the project's goals.
+                            <div class="text-block">
+                                <div class="text-title">Respectful Precision:</div>
+                                <div class="text-content">
+                                    Every decision and detail serves the project's goals.
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div id="contact" class="content">
-                <div class="contact-container">
-                    <div class="contact-row">
-                        <div class="logo-section">
-                            <div class="logo">
-                                <a href="/">
-                                    <img src="./images/greenLogo.png" alt="logo">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="content-section">
-                            <div class="info-section">
-                                <h2 class="section-title">Info</h2>
-
-                                <div class="info-item">
-                                    <div class="info-label">ADDRESS</div>
-                                    <div class="info-value">KSA - Jeddah</div>
-                                </div>
-
-                                <div class="info-item">
-                                    <div class="info-label">PHONE</div>
-                                    <div class="info-value">+966 293 11679</div>
-                                </div>
-
-                                <div class="info-item">
-                                    <div class="info-label">EMAIL</div>
-                                    <div class="info-value">elevareero.com</div>
-                                </div>
-
-                                <div class="info-item">
-                                    <div class="info-label">WEBSITE</div>
-                                    <div class="info-value">elevareero.com</div>
+                <div id="contact" class="content">
+                    <div class="contact-container">
+                        <div class="contact-row">
+                            <div class="logo-section">
+                                <div class="logo">
+                                    <a href="/">
+                                        <img src="./images/greenLogo.png" alt="logo">
+                                    </a>
                                 </div>
                             </div>
 
-                            <div class="form-section">
-                                <h2 class="section-title">Get in touch</h2>
+                            <div class="content-section">
+                                <div class="info-section">
+                                    <h2 class="section-title">Info</h2>
 
-                                <form action="#" method="post">
-                                    <div class="form-row">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Mohammad" name="name"
-                                                required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="Your Email"
-                                                name="email" required>
-                                        </div>
+                                    <div class="info-item">
+                                        <div class="info-label">ADDRESS</div>
+                                        <div class="info-value">KSA - Jeddah</div>
                                     </div>
 
-                                    <div class="form-group">
-                                        <textarea class="form-control" placeholder="Comment" name="comment"
-                                            required></textarea>
+                                    <div class="info-item">
+                                        <div class="info-label">PHONE</div>
+                                        <div class="info-value">+966 293 11679</div>
                                     </div>
 
-                                    <button type="submit" class="submit-btn">get in touch →</button>
-                                </form>
+                                    <div class="info-item">
+                                        <div class="info-label">EMAIL</div>
+                                        <div class="info-value">elevareero.com</div>
+                                    </div>
+
+                                    <div class="info-item">
+                                        <div class="info-label">WEBSITE</div>
+                                        <div class="info-value">elevareero.com</div>
+                                    </div>
+                                </div>
+
+                                <div class="form-section">
+                                    <h2 class="section-title">Get in touch</h2>
+
+                                    <form action="#" method="post">
+                                        <div class="form-row">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Mohammad"
+                                                    name="name" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" placeholder="Your Email"
+                                                    name="email" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <textarea class="form-control" placeholder="Comment" name="comment"
+                                                required></textarea>
+                                        </div>
+
+                                        <button type="submit" class="submit-btn">get in touch →</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="ourStory">
-        <div class="container">
-            <div class="row px-5">
-                <div class="col-12 header">
-                    <ul class="dots">
-                        <li>
-                            <span></span>
-                        </li>
-                        <li>
-                            <span></span>
-                        </li>
-                        <li>
-                            <span></span>
-                        </li>
-                    </ul>
-                    <h1>OUR - STORY</h1>
-                </div>
-                <div class="col-md-6">
-                    <p>Elevaretro started from a simple dream and a genuine passion to transform ideas into tangible
-                        spaces that reflect soul and authenticity. In the beginning, we were a small group of
-                        professionals who believed that every space has a story, and that executing it with care and
-                        precision brings that story to life. Through our first projects, we realized that true quality
-                        is not only about materials or construction techniques — it is about the thoughtful attention to
-                        the execution details that add emotional value to the space.</p>
-                </div>
-                <div class="col-md-6">
-                    <p>We built strong relationships with our clients, learning that trust and transparent communication
-                        are key to transforming visions into reality. Over time, Elevaretro grew, but we never lost
-                        sight of our roots. Our focus remains clear: to execute projects with precision, passion, and
-                        full responsibility, delivering spaces that combine functionality, beauty, and user experience —
-                        always aligned with the client’s vision and objectives. We are proud of our journey, and we
-                        welcome every new challenge as an opportunity to demonstrate that passion, honesty, and
-                        discipline are the true keys to sustainable success.</p>
+        </section>
+        <section class="ourStory">
+            <div class="container">
+                <div class="row px-5">
+                    <div class="col-12 header">
+                        <ul class="dots">
+                            <li data-aos="fade-up" data-aos-delay="100">
+                                <span></span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="200">
+                                <span></span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="300">
+                                <span></span>
+                            </li>
+                        </ul>
+                        <h1 data-aos="fade-up" data-aos-delay="500"><b> OUR </b> - STORY</h1>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-right" data-aos-delay="700">
+                        <p><b>Elevaretro</b> started from a simple dream and a genuine passion to transform ideas into
+                            tangible
+                            spaces that reflect soul and authenticity. In the beginning, we were a small group of
+                            professionals who believed that <b>every space has a story</b>, and that executing it with
+                            care and
+                            precision brings that story to life. Through our first projects, we realized that true
+                            quality
+                            is not only about materials or construction techniques — it is about the thoughtful
+                            attention to
+                            the execution details that add emotional value to the space.</p>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-right" data-aos-delay="900">
+                        <p>We built strong relationships with our clients, learning that trust and <b>transparent
+                                communication</b>
+                            are key to transforming visions into reality. Over time, Elevaretro grew, but we never lost
+                            sight of our roots. Our focus remains clear: to execute projects with precision, passion,
+                            and
+                            <b>full responsibility</b>, delivering spaces that combine functionality, beauty, and user
+                            experience —
+                            always aligned with the client’s vision and objectives. We are proud of our journey, and we
+                            welcome every new challenge as an opportunity to demonstrate that passion, honesty, and
+                            discipline are the true keys to sustainable success.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <section class="services" id="services">
-        <h1 class="mainTitle">Our - Services</h1>
-        <ul>
-            <li>
-                <a href="./services/foundation.html">
-                    <h1> Project - Foundations</h1>
-                    <img src="./art/4x/Asset 2@4x.png" alt="services image">
-                </a>
-            </li>
-            <li>
-                <a href="./services/seamless.html">
-                    <h1> Seamless - Execution</h1>
-                    <img src="./art/4x/Asset 3@4x.png" alt="services image">
-                </a>
-            </li>
-            <li>
-                <a href="./services/qualityControl.html">
-                    <h1>Quality Control & Risk protection </h1>
-                    <img src="./art/4x/Asset 4@4x.png" alt="services image">
-                </a>
-            </li>
-            <li>
-                <a href="./services/smoothHandover.html">
-                    <h1>Smooth Handover & Beyond</h1>
-                    <img src="./art/4x/Asset 14@4x.png" alt="services image">
-                </a>
-            </li>
-        </ul>
-    </section>
+        <section class="services" id="services">
+            <h1 class="mainTitle" data-aos="fade-up" data-aos-delay="100">Our - Services</h1>
+            <ul>
+                <li data-aos="fade-up" data-aos-delay="200">
+                    <a href="./services/foundation.html">
+                        <h1 data-aos="fade-up" data-aos-delay="400"> <b>Project </b> - Foundations</h1>
+                        <img src="./art/4x/Asset 2@4x.png" alt="services image">
+                    </a>
+                </li data-aos="fade-up" data-aos-delay="300">
+                <li>
+                    <a href="./services/seamless.html">
+                        <h1 data-aos="fade-up" data-aos-delay="500"> <b>Seamless </b> - Execution</h1>
+                        <img src="./art/4x/Asset 3@4x.png" alt="services image">
+                    </a>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="400">
+                    <a href="./services/qualityControl.html">
+                        <h1 data-aos="fade-up" data-aos-delay="600"><b>Quality Control </b> & Risk protection </h1>
+                        <img src="./art/4x/Asset 4@4x.png" alt="services image">
+                    </a>
+                </li>
+                <li data-aos="fade-up" data-aos-delay="500">
+                    <a href="./services/smoothHandover.html">
+                        <h1 data-aos="fade-up" data-aos-delay="700"><b>Smooth Handover </b> & Beyond</h1>
+                        <img src="./art/4x/Asset 14@4x.png" alt="services image">
+                    </a>
+                </li>
+            </ul>
+        </section>
 
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="left-section">
-                <div class="links">
-                    <a href="#">Privacy notice</a>
-                    <a href="#">Terms of use</a>
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="left-section">
+                    <div class="links">
+                        <a href="#">Privacy notice</a>
+                        <a href="#">Terms of use</a>
+                    </div>
+                    <p class="disclaimer">
+                        Please, be informed that the images, property rights, designs<br>
+                        and other materials on this site belong to "ELEVARETRO<br>
+                        CONTRACTING". You may request permission to use them by contacting us at privacy@elevaretro.com
+                    </p>
+                    <p class="copyright">Copyright 2025. All RIGHTS RESERVED</p>
                 </div>
-                <p class="disclaimer">
-                    Please, be informed that the images, property rights, designs<br>
-                    and other materials on this site belong to "ELEVARETRO<br>
-                    CONTRACTING". You may request permission to use them by contacting us at privacy@elevaretro.com
-                </p>
-                <p class="copyright">Copyright 2025. All RIGHTS RESERVED</p>
+                <div class="right-section">
+                    <a href="/">
+                        <img src="./images/elevartro.png" alt="Elevaretro Contracting Logo" class="elevaretro-logo">
+                    </a>
+                </div>
             </div>
-            <div class="right-section">
-                <a href="/">
-                    <img src="./images/elevartro.png" alt="Elevaretro Contracting Logo" class="elevaretro-logo">
-                </a>
-            </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
@@ -423,6 +526,191 @@
             }
         });
     </script>
+    <script>
+        // Preloader functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const preloader = document.getElementById('preloader');
+            const mainContent = document.getElementById('mainContent');
+
+            // Ensure preloader is visible and animations start immediately
+            preloader.style.display = 'flex';
+
+            // Wait for 3 seconds, then hide preloader
+            setTimeout(function () {
+                preloader.classList.add('fade-out');
+
+                // After fade out animation completes, show main content and init AOS
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                    mainContent.classList.add('show');
+
+                    // Initialize AOS after preloader is gone
+                    if (typeof AOS !== 'undefined') {
+                        AOS.init({
+                            duration: 1000,
+                            once: false
+                        });
+                    }
+                }, 500); // Wait for fade-out transition
+
+            }, 2000); // 3 seconds delay
+        });
+    </script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <div class="cursor"></div>
+
+    <script>
+        const cursor = document.querySelector(".cursor");
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+
+        document.addEventListener("mousemove", e => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animate() {
+            cursorX += (mouseX - cursorX) * 0.1; // 0.1 = smoothness factor
+            cursorY += (mouseY - cursorY) * 0.1;
+            cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+    <script>
+        const slides = document.querySelectorAll(".slide");
+        const pagination = document.getElementById("pagination");
+        const prevBtn = document.getElementById("prev");
+        const nextBtn = document.getElementById("next");
+
+        let current = 0;
+        let slideInterval = setInterval(nextSlide, 10000);
+        const currentEl = document.getElementById("current");
+        const totalEl = document.getElementById("total");
+
+        // Function to format numbers with leading zero
+        function formatNumber(num) {
+            return num.toString().padStart(2, '0');
+        }
+
+        totalEl.textContent = formatNumber(slides.length); // set total once with zero padding
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                if (i === index) slide.classList.add("active");
+            });
+            currentEl.textContent = formatNumber(index + 1);
+        }
+
+        function nextSlide() {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        }
+
+        function prevSlide() {
+            current = (current - 1 + slides.length) % slides.length;
+            showSlide(current);
+        }
+
+        function resetTimer() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 10000);
+        }
+
+        // Button clicks
+        prevBtn.addEventListener("click", () => {
+            prevSlide();
+            resetTimer();
+        });
+
+        nextBtn.addEventListener("click", () => {
+            nextSlide();
+            resetTimer();
+        });
+
+        // Keyboard navigation
+        document.addEventListener("keydown", e => {
+            if (e.key === "ArrowUp") {
+                prevSlide();
+                resetTimer();
+            } else if (e.key === "ArrowDown") {
+                nextSlide();
+                resetTimer();
+            }
+        });
+
+        // Initialize first slide
+        showSlide(0);
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mainHeader = document.querySelector(".mainHeader");
+            const mobileMenu = document.getElementById('mobileMenu');
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const servicesSection = document.getElementById('services');
+
+            window.addEventListener("scroll", function () {
+                let scrollPos = window.scrollY || window.pageYOffset;
+
+                // Fixed header logic
+                if (scrollPos >= 100) {
+                    mainHeader.classList.add("fixedHeader");
+                } else {
+                    mainHeader.classList.remove("fixedHeader");
+                    mobileMenu.classList.remove('active');
+                    hamburgerBtn.classList.remove('active');
+                }
+
+                // Services section logic
+                if (servicesSection) {
+                    const servicesTop = servicesSection.offsetTop;
+                    const servicesHeight = servicesSection.offsetHeight;
+                    const servicesBottom = servicesTop + servicesHeight;
+
+                    // Add class when services section is in view
+                    if (scrollPos >= servicesTop - 100 && scrollPos < servicesBottom) {
+                        mainHeader.classList.add("servicesActive");
+                    } else {
+                        mainHeader.classList.remove("servicesActive");
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        // Toggle menu with hamburger button
+        hamburgerBtn.addEventListener('click', function () {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+
+        });
+
+        // Close menu when clicking outside
+        mobileMenu.addEventListener('click', function (event) {
+            if (event.target === mobileMenu) {
+                hamburgerBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+
+            }
+        });
+
+        // Close with Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                hamburgerBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+
 </body>
 
 

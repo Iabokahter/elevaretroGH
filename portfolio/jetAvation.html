@@ -5,7 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Project - Foundations</title>
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
 
+    <!-- PNG favicon (recommended for better quality) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/logo.png">
+
+    <!-- Apple touch icon (for iOS devices) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/logo.png">
+
+    <!-- Android/Chrome -->
+    <link rel="manifest" href="./images/logo.png">
     <!-- Google Fonts: Cinzel for the logo, Inter for the subtitle -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +33,8 @@
 
     <!-- fancyBox JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="../style.css">
 
@@ -36,7 +48,7 @@
                 <div class="col-12">
                     <div class="navbarHeader">
                         <div class="logo">
-                            <a href="/">
+                            <a href="/index.html">
                                 <img src="../images/logo.png" alt="logo">
                             </a>
                         </div>
@@ -98,19 +110,24 @@
 
             <div class="menu-right">
                 <nav>
-                    <ul class="nav-menu">
-                        <li><a href="#">COMMUNITY</a></li>
-                        <li><a href="" class="contactSection">ABOUT</a></li>
-                        <li><a href="#">PORTFOLIO</a></li>
-                        <li><a href="#">SERVICES</a></li>
-                        <li><a href="" class="contactSection">Contact</a></li>
-                    </ul>
+                                <ul class="nav-menu">
+                                    <li>
+                                        <a href="">COMMUNITY</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="aboutSection">ABOUT</a>
+                                    </li>
+                                    <li>
+                                        <a href="../portfolio.html">PORTFOILO</a>
+                                    </li>
+                                    <li>
+                                        <a href="#services">SERVICES</a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="contactSection"> CONTACT US</a>
+                                    </li>
+                                </ul>
                 </nav>
-
-                <div class="search-container">
-                    <input type="text" class="search-input" placeholder="Search">
-                    <button class="search-btn">🔍</button>
-                </div>
             </div>
         </div>
     </div>
@@ -120,9 +137,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="text">
-                        <h1>Jet Avation Brief</h1>
+                        <h1 data-aos="fade-right" data-aos-delay="200">Jet Avation Brief</h1>
                         <div class="portfolioText">
-                            <p>
+                            <p data-aos="fade-right" data-aos-delay="400">
                                 started from a simple dream and a genuine <br>
                                 passion to transform ideas into tangible <br>
                                 spaces that reflect soul and authenticity. In <br>
@@ -137,20 +154,20 @@
                                 that add emotional value to the space.
                             </p>
                             <div class="contact-info">
-                                <div class="infoItem">
+                                <div class="infoItem" data-aos="fade-right" data-aos-delay="600">
                                     <h4>Location</h4>
                                     <a href="www.googlemaps.com" target="_blank">KSA - Jeddah</a>
                                 </div>
-                                <div class="infoItem">
+                                <div class="infoItem" data-aos="fade-right" data-aos-delay="800">
                                     <h4>Square meters</h4>
                                     <p>1224,432 m</p>
                                 </div>
-                                <div class="infoItem">
+                                <div class="infoItem" data-aos="fade-right" data-aos-delay="600">
                                     <h4>Date</h4>
                                     <p>Completed in March 2026</p>
                                 </div>
                             </div>
-                            <div class="socialLInks">
+                            <div class="socialLInks" data-aos="fade-right" data-aos-delay="800">
                                 <span>Share : </span>
                                 <ul>
                                     <li>
@@ -190,7 +207,7 @@
             <div class="header-row">
                 <div class="header-cell"></div>
                 <div class="header-cell">
-                    <h1 class="jasa-offices-title">JASA OFFICES</h1>
+                    <h1 class="jasa-offices-title" data-aos="fade-right" data-aos-delay="200">JASA OFFICES</h1>
                 </div>
                 <div class="header-cell">
                 </div>
@@ -202,7 +219,7 @@
                     <p class="year">2019</p>
                 </div>
                 <div class="content-cell image-container">
-                    <a href="../images/building1.jpg" data-fancybox="gallery" data-caption="Primary Lounge">
+                    <a href="../images/building1.jpg" data-fancybox="gallery" data-caption="Primary Lounge" data-aos="fade-in" data-aos-delay="300">
                         <img src="../images/building1.jpg" alt="Primary Lounge">
                     </a>
                 </div>
@@ -215,7 +232,7 @@
         <div class="section-container">
             <div class="content-row">
                 <div class="content-cell image-container">
-                    <a href="../images/building1.jpg" data-fancybox="gallery" data-caption="Primary Lounge">
+                    <a href="../images/building1.jpg" data-fancybox="gallery" data-caption="Primary Lounge" data-aos="fade-in" data-aos-delay="400">
                         <img src="../images/building1.jpg" alt="Primary Lounge">
                     </a>
                 </div>
@@ -224,7 +241,7 @@
                     <p class="year">2019</p>
                 </div>
                 <div class="content-cell image-container">
-                    <a href="../images/building1.jpg" data-fancybox="gallery" data-caption="Primary Lounge">
+                    <a href="../images/building1.jpg" data-fancybox="gallery" data-caption="Primary Lounge" data-aos="fade-in" data-aos-delay="500">
                         <img src="../images/building1.jpg" alt="Primary Lounge">
                     </a>
                 </div>
@@ -233,7 +250,7 @@
         <div class="section-container">
             <div class="content-row">
                 <div class="content-cell image-container">
-                    <a href="../images/building1.jpg" data-fancybox="gallery" data-caption="Primary Lounge">
+                    <a href="../images/building1.jpg" data-fancybox="gallery" data-caption="Primary Lounge" data-aos="fade-in" data-aos-delay="600">
                         <img src="../images/building1.jpg" alt="Primary Lounge">
                     </a>
                 </div>
@@ -264,7 +281,7 @@
                     <p class="year">2019</p>
                 </div>
                 <div class="content-cell image-container">
-                    <a href="../images/building1.jpg" data-fancybox="gallery" data-caption="Primary Lounge">
+                    <a href="../images/building1.jpg" data-fancybox="gallery" data-caption="Primary Lounge" data-aos="fade-in" data-aos-delay="300">
                         <img src="../images/building1.jpg" alt="Primary Lounge">
                     </a>
                 </div>
@@ -289,7 +306,7 @@
                     <p class="year">2019</p>
                 </div>
                 <div class="content-cell image-container">
-                    <a href="../images/building1.jpg" data-fancybox="gallery" data-caption="Primary Lounge">
+                    <a href="../images/building1.jpg" data-fancybox="gallery" data-caption="Primary Lounge" data-aos="fade-in" data-aos-delay="400">
                         <img src="../images/building1.jpg" alt="Primary Lounge">
                     </a>
                 </div>
@@ -414,6 +431,14 @@
             });
         });
     </script>
+      <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000, // animation duration
+      once: false     // false = animate every time you scroll up/down
+    });
+  </script>
 </body>
 
 </html>
