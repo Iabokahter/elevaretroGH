@@ -4,7 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | ELEVARETRO</title>
+    <title>Elevaretro - Architectural Design & Construction Services</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Elevaretro - Architectural Design & Construction Services">
+    <meta property="og:description"
+        content="Professional architectural design and construction services. We transform ideas into authentic spaces with precision, passion, and attention to detail. Quality construction meets innovative design.">
+    <meta property="og:image" content="https://samer7777.github.io/ELEVARETRO/art/1x/Asset%208.png">
+    <meta property="og:url" content="https://samer7777.github.io/ELEVARETRO/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Elevaretro">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Elevaretro - Architectural Design & Construction Services">
+    <meta name="twitter:description"
+        content="Professional architectural design and construction services. We transform ideas into authentic spaces with precision, passion, and attention to detail.">
+    <meta name="twitter:image" content="https://samer7777.github.io/ELEVARETRO/art/1x/Asset%208.png">
+
+    <!-- Meta Tags إضافية -->
+    <meta name="description"
+        content="Professional architectural design and construction services. We transform ideas into authentic spaces with precision, passion, and attention to detail. Quality construction meets innovative design.">
+    <meta name="keywords"
+        content="architecture, interior design, construction, architectural services, design solutions, space planning, building design">
+    <meta name="author" content="Elevaretro">
+
     <!-- Standard favicon -->
     <link rel="icon" type="image/x-icon" href="./images/logo.png">
 
@@ -50,18 +77,18 @@
                     <div class="col-12">
                         <div class="navbarHeader">
                             <div class="logo">
-                                <a href="/index.html">
-                                    <img src="../images/logo.png" alt="logo">
+                                <a href="index.html">
+                                    <img src="./images/logo.png" alt="logo">
                                     <img src="./images/greenLogo.png" class="greenLogo" alt="logo">
                                 </a>
                             </div>
                             <div class="menu">
                                 <ul>
                                     <li>
-                                        <a href="">COMMUNITY</a>
+                                        <a href="" class="aboutSection">ABOUT</a>
                                     </li>
                                     <li>
-                                        <a href="" class="aboutSection">ABOUT</a>
+                                        <a href="">COMMUNITY</a>
                                     </li>
                                     <li>
                                         <a href="./portfolio.html">PORTFOILO</a>
@@ -117,13 +144,13 @@
                     <nav>
                         <ul class="nav-menu">
                             <li>
-                                <a href="">COMMUNITY</a>
-                            </li>
-                            <li>
                                 <a href="" class="aboutSection">ABOUT</a>
                             </li>
                             <li>
-                                <a href="../portfolio.html">PORTFOILO</a>
+                                <a href="">COMMUNITY</a>
+                            </li>
+                            <li>
+                                <a href="./portfolio.html">PORTFOILO</a>
                             </li>
                             <li>
                                 <a href="#services">SERVICES</a>
@@ -441,6 +468,23 @@
         const aboutSection = document.getElementById('about');
         const contactSection = document.getElementById('contact');
 
+        // التحقق من كون الجهاز موبايل
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+                window.innerWidth < 768;
+        }
+
+        // دالة للسكرول التلقائي (للموبايل فقط)
+        function scrollToContent() {
+            if (isMobile()) {
+                const scrollDistance = window.innerHeight * 0.8; // 90vh
+                window.scrollTo({
+                    top: scrollDistance,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
         // دالة لعرض قسم About
         function showAboutSection() {
             aboutBtn.classList.add('active');
@@ -449,6 +493,9 @@
             contactBtn.classList.add('hide');
             aboutSection.classList.add('active');
             contactSection.classList.remove('active');
+
+            // إضافة السكرول للموبايل
+            scrollToContent();
         }
 
         // دالة لعرض قسم Contact
@@ -459,6 +506,9 @@
             aboutBtn.classList.add('hide');
             contactSection.classList.add('active');
             aboutSection.classList.remove('active');
+
+            // إضافة السكرول للموبايل
+            scrollToContent();
         }
 
         // دالة لإخفاء الأقسام
@@ -514,7 +564,6 @@
             });
         }
 
-        // فحص إذا في hash في الـ URL لما تحمل الصفحة
         // فحص URL parameters بدلاً من hash
         window.addEventListener('load', () => {
             const urlParams = new URLSearchParams(window.location.search);
@@ -564,16 +613,32 @@
 
     <script>
         const cursor = document.querySelector(".cursor");
+        const header = document.querySelector(".mainHeader");
         let mouseX = 0, mouseY = 0;
         let cursorX = 0, cursorY = 0;
+
+        // إضافة transition للكورسر في CSS أو هنا
+        cursor.style.transition = "opacity 0.3s ease, visibility 0.3s ease";
 
         document.addEventListener("mousemove", e => {
             mouseX = e.clientX;
             mouseY = e.clientY;
         });
 
+        // إخفاء الكورسر مع انيميشن
+        header.addEventListener("mouseenter", () => {
+            cursor.style.opacity = "0";
+            cursor.style.visibility = "hidden";
+        });
+
+        // إظهار الكورسر مع انيميشن
+        header.addEventListener("mouseleave", () => {
+            cursor.style.opacity = "1";
+            cursor.style.visibility = "visible";
+        });
+
         function animate() {
-            cursorX += (mouseX - cursorX) * 0.1; // 0.1 = smoothness factor
+            cursorX += (mouseX - cursorX) * 0.1;
             cursorY += (mouseY - cursorY) * 0.1;
             cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
             requestAnimationFrame(animate);

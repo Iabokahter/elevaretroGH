@@ -4,7 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | ELEVARETRO</title>
+    <title>Contact Us - Elevaretro | Get In Touch</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact Us - Elevaretro | Get In Touch">
+    <meta property="og:description"
+        content="Ready to start your next project? Contact Elevaretro for professional architectural design and construction services. Let's transform your ideas into reality together.">
+    <meta property="og:image" content="https://samer7777.github.io/ELEVARETRO/art/1x/Asset%208.png">
+    <meta property="og:url" content="https://samer7777.github.io/ELEVARETRO/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Elevaretro">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us - Elevaretro | Get In Touch">
+    <meta name="twitter:description"
+        content="Ready to start your next project? Contact Elevaretro for professional architectural design and construction services.">
+    <meta name="twitter:image" content="https://samer7777.github.io/ELEVARETRO/art/1x/Asset%208.png">
+
+    <!-- Meta Tags إضافية -->
+    <meta name="description"
+        content="Ready to start your next project? Contact Elevaretro for professional architectural design and construction services. Let's transform your ideas into reality together.">
+    <meta name="keywords"
+        content="contact elevaretro, architectural consultation, design inquiry, construction quote, get in touch, project consultation">
+    <meta name="author" content="Elevaretro">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
     <!-- Standard favicon -->
     <link rel="icon" type="image/x-icon" href="./images/logo.png">
 
@@ -17,6 +43,7 @@
 
     <!-- Android/Chrome -->
     <link rel="manifest" href="./images/logo.png">
+
     <!-- Google Fonts: Cinzel for the logo, Inter for the subtitle -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,14 +120,16 @@
                         For each project the approach rests on a careful understanding of the space, or the site's.
                     </div>
 
-                    <button class="send-request-btn">SEND REQUEST</button>
+                    <button class="btn btn-2 hover-slide-right">
+                        <span>SEND REQUEST</span>
+                    </button>
                 </div>
 
                 <div class="menu-right">
                     <nav>
                         <ul class="nav-menu">
-                            <li><a href="./index.html">COMMUNITY</a></li>
                             <li><a href="./index.html">ABOUT</a></li>
+                            <li><a href="./index.html">COMMUNITY</a></li>
                             <li><a href="./portfolio.html">PORTFOLIO</a></li>
                             <li><a href="./index.html">SERVICES</a></li>
                             <li><a href="./contact.html">CONTACT US</a></li>
@@ -129,29 +158,29 @@
 
     <!-- Page 2 -->
     <div class="page page-2 hidden" id="page2">
-        <header class="mainHeader">
+        <header class="mainHeader hideOnMobile">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="navbarHeader">
                             <div class="logo">
                                 <a href="/">
-                                    <img src="../images/logo.png" alt="logo">
+                                    <img src="./images/logo.png" alt="logo">
                                 </a>
                             </div>
                             <div class="menu">
                                 <ul>
                                     <li>
+                                        <a href="./index.html" class="aboutSection">ABOUT</a>
+                                    </li>
+                                    <li>
                                         <a href="">COMMUNITY</a>
                                     </li>
                                     <li>
-                                        <a href="" class="aboutSection">ABOUT</a>
+                                        <a href="./portfolio.html">PORTFOILO</a>
                                     </li>
                                     <li>
-                                        <a href="../portfolio.html">PORTFOILO</a>
-                                    </li>
-                                    <li>
-                                        <a href="../index.html#services">SERVICES</a>
+                                        <a href="./index.html#services">SERVICES</a>
                                     </li>
                                     <li>
                                         <a href="" class="contactSection"> CONTACT US</a>
@@ -163,7 +192,37 @@
                 </div>
             </div>
         </header>
+        <div class="showOnMobile">
+            <header class="mainHeader innerGreenFixed">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="navbarHeader">
+                                <div class="logo">
+                                    <a href="/index.html">
+                                        <img src="./images/logo.png" alt="logo">
+                                        <img src="./images/greenLogo.png" class="greenLogo" alt="logo">
+                                    </a>
+                                </div>
+                                <div class="menu contactMenu">
+                                    <ul>
+                                        <li>
+                                            <a style="cursor: pointer;"
+                                                onclick="navigateToPage('page1', 'slide-left')">CONTACT US</a>
+                                        </li>
+                                    </ul>
+                                    <button class="hamburger-btn" id="hamburgerBtn">
+                                        <div class="line"></div>
+                                        <div class="line"></div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
+        </div>
         <section class="innerServices contactForm">
             <img src="./images/building1.jpg" alt="img-fluid">
             <div class="container">
@@ -173,7 +232,7 @@
                             Your next project starts <br>
                             here !
                         </h1>
-                        <form action="#">
+                        <form action="/contact.html">
                             <div class="form-group">
                                 <label for="name">First Name & Last Name</label>
                                 <input type="text" class="form-control" placeholder="Enter username" id="name">
@@ -195,7 +254,42 @@
             </div>
         </section>
     </div>
+    <div class="cursor"></div>
 
+    <script>
+        const cursor = document.querySelector(".cursor");
+        const header = document.querySelector(".mainHeader");
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+
+
+        cursor.style.transition = "opacity 0.3s ease, visibility 0.3s ease";
+
+        document.addEventListener("mousemove", e => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+
+        header.addEventListener("mouseenter", () => {
+            cursor.style.opacity = "0";
+            cursor.style.visibility = "hidden";
+        });
+
+
+        header.addEventListener("mouseleave", () => {
+            cursor.style.opacity = "1";
+            cursor.style.visibility = "visible";
+        });
+
+        function animate() {
+            cursorX += (mouseX - cursorX) * 0.1;
+            cursorY += (mouseY - cursorY) * 0.1;
+            cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
 
     <script>
         let isTransitioning = false;
@@ -216,21 +310,21 @@
                 transition.classList.add('active');
             }, 10);
 
-            // Switch pages when slide is in center
+
             setTimeout(() => {
-                // Hide all pages
+
                 document.querySelectorAll('.page').forEach(page => {
                     page.classList.add('hidden');
                 });
-                // Show target page
+
                 targetPage.classList.remove('hidden');
             }, 300);
 
-            // Continue sliding to complete the transition
+
             setTimeout(() => {
                 transition.classList.add('slide-out');
 
-                // Reset everything after animation completes
+
                 setTimeout(() => {
                     transition.classList.remove('active', 'slide-out');
                     isTransitioning = false;
@@ -238,9 +332,9 @@
             }, 600);
         }
 
-        // For actual website integration with real URLs
+
         function setupPageTransitions() {
-            // Intercept all internal links
+
             document.addEventListener('click', function (e) {
                 const link = e.target.closest('a[href^="/"], a[href^="./"], a[href^="../"]');
 
@@ -248,30 +342,30 @@
                     e.preventDefault();
                     const href = link.getAttribute('href');
 
-                    // Start transition
+
                     const transition = document.getElementById('pageTransition');
                     transition.classList.add('active');
 
-                    // Navigate after transition
+
                     setTimeout(() => {
                         window.location.href = href;
                     }, 800);
                 }
             });
 
-            // Handle back/forward browser navigation
+
             window.addEventListener('pageshow', function (event) {
                 if (event.persisted) {
-                    // Page loaded from cache (back/forward)
+
                     const transition = document.getElementById('pageTransition');
                     transition.classList.remove('active', 'slide-out');
                 }
             });
         }
 
-        // Initialize
+
         document.addEventListener('DOMContentLoaded', function () {
-            // setupPageTransitions(); // Uncomment for real website
+
         });
     </script>
 
@@ -280,7 +374,7 @@
         const mobileMenu = document.getElementById('mobileMenu');
         const mainHeader = document.querySelector('.mainHeader');
 
-        // Toggle menu with hamburger button
+
         hamburgerBtn.addEventListener('click', function () {
             this.classList.toggle('active');
             mobileMenu.classList.toggle('active');
