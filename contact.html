@@ -80,7 +80,7 @@
                     <div class="col-12">
                         <div class="navbarHeader">
                             <div class="logo">
-                                <a href="/">
+                            <a href="index.html">
                                     <img src="./images/logo.png" alt="logo">
                                 </a>
                             </div>
@@ -255,7 +255,61 @@
         </section>
     </div>
     <div class="cursor"></div>
+    <script>
+        document.querySelector("form").addEventListener("submit", async function(e) {
+            e.preventDefault(); // stop normal form submission
+        
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const description = document.getElementById("description").value.trim();
+        
+            const body = {
+                "jsonrpc": "2.0",
+                "method": "call",
+                "params": {
+                    "service": "object",
+                    "method": "execute_kw",
+                    "args": [
+                        "Training",
+                        2,
+                        "123",
+                        "crm.lead",
+                        "create",
+                        [{
+                            "name": "Contact Form",
+                            "email_from": email,
+                            "phone": "123456789", // you can add a phone field in your form if needed
+                            "description": description,
+                            "type": "lead",
+                            "stage_id": 1,
+                            "contact_name": name,
+                            "partner_name": name
+                        }]
+                    ],
+                    "kwargs": {}
+                },
+                "id": 1
+            };
+        
+            try {
+                const res = await fetch("https://elevaretro.imconsultjo.com/jsonrpc", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(body)
+                });
+        
+                const data = await res.json();
+                console.log("Response:", data);
+                window.location.href = "index.html";
 
+            } catch (err) {
+                console.error("Error:", err);
+                alert("There was an error submitting the form.");
+            }
+        });
+        </script>
     <script>
         const cursor = document.querySelector(".cursor");
         const header = document.querySelector(".mainHeader");
