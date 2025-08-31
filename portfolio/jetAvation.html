@@ -105,7 +105,7 @@
                     For each project the approach rests on a careful understanding of the space, or the site's.
                 </div>
 
-                <button class="send-request-btn">SEND REQUEST</button>
+                <button class="send-request-btn-portfolio">SEND REQUEST</button>
             </div>
 
             <div class="menu-right">
@@ -121,7 +121,7 @@
                             <a href="../portfolio.html">PORTFOILO</a>
                         </li>
                         <li>
-                            <a href="#services">SERVICES</a>
+                            <a href="../index.html#services">SERVICES</a>
                         </li>
                         <li>
                             <a href="../contact.html"> CONTACT US</a>
@@ -211,41 +211,51 @@
     <section class="innerPortfolio">
         <div class="section-container">
             
-            <div class="content-row">
-                
+
+            
                 <div class="content-cell image-container">
-                    <a href="../images/building1.jpg" data-fancybox="gallery" data-caption="Primary Lounge"
+                    <a href="../art/JetAviation/4x/Asset 3.webp" data-fancybox="gallery" data-caption="Primary Lounge"
                         data-aos="fade-in" data-aos-delay="300">
-                        <img src="../images/building1.jpg" alt="Primary Lounge">
+
+                        <img src="../art/JetAviation/4x/Asset 3.webp" alt="Primary Lounge">
+
+                        
+                        <div class="text">
+                            
+
+                       <h1 >SPACE NAME GE 290</h1>
+                       <p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit,</p>
+                        </div>
+
                     </a>
                 </div>
             </div>
-        </div>
+
+            
        
         
         
     </section>
 
     <section class="nextproject">
-        <
+        
+       
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="text">
                         <h1 data-aos="fade-right" data-aos-delay="200">Your next project starts Here</h1>
-                        <div class="portfolioText">
-                            <p data-aos="fade-right" data-aos-delay="400">
+
+                        <p data-aos="fade-right" data-aos-delay="300">
                                 For each project the approach rests on a careful
                                 understanding of the space . <br>
-                            </p>
+                        </p>
 
 
-
-
-                        </div>
+                            
 
                     </div>
-                    <p data-aos="fade-right" data-aos-delay="600">
+                    <p data-aos="fade-right" data-aos-delay="400">
 
                     <button class="btn btn-2 hover-slide-right" style="color: #000">
                         <span style="border-color:#535c51; color:#535c51">SEND REQUEST</span>
@@ -255,7 +265,6 @@
                 </div>
             </div>
         </div>
-       
     </section>
 
 
@@ -285,11 +294,12 @@
     <script>
         const cursor = document.querySelector(".cursor");
         const header = document.querySelector(".mainHeader");
+        const sectionContainer = document.querySelector(".section-container");
         let mouseX = 0, mouseY = 0;
         let cursorX = 0, cursorY = 0;
 
         // إضافة transition للكورسر في CSS أو هنا
-        cursor.style.transition = "opacity 0.3s ease, visibility 0.3s ease";
+        cursor.style.transition = "opacity 0.3s ease, visibility 0.3s ease, background-image 0.3s ease";
 
         document.addEventListener("mousemove", e => {
             mouseX = e.clientX;
@@ -307,6 +317,19 @@
             cursor.style.opacity = "1";
             cursor.style.visibility = "visible";
         });
+
+        // Change cursor image when hovering over section-container or its children
+        if (sectionContainer) {
+            sectionContainer.addEventListener("mouseenter", () => {
+                cursor.style.backgroundImage = "url('../art/SVG/Asset 1.svg')";
+                cursor.style.backgroundSize = "auto";
+            });
+
+            sectionContainer.addEventListener("mouseleave", () => {
+                cursor.style.backgroundImage = "url('../art/SVG/cursor.svg')";
+                cursor.style.backgroundSize = "auto";
+            });
+        }
 
         function animate() {
             cursorX += (mouseX - cursorX) * 0.1;
@@ -372,14 +395,14 @@
         if (aboutHeaderBtn) {
             aboutHeaderBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                window.location.href = '../index.html?section=about';
+                window.location.href = '../contact.html';
             });
         }
 
         if (contactHeaderBtn) {
             contactHeaderBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                window.location.href = '../index.html?section=contact';
+                window.location.href = '../contact.html';
             });
         }
     </script>
@@ -412,6 +435,88 @@
         AOS.init({
             duration: 1000, // animation duration
             once: false     // false = animate every time you scroll up/down
+        });
+    </script>
+
+    <!-- Horizontal Image Swipe Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageContainer = document.querySelector('.section-container');
+            
+            if (!imageContainer) return;
+
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            // Mouse events for desktop
+            imageContainer.addEventListener('mousedown', (e) => {
+                isDown = true;
+                imageContainer.style.cursor = 'url("../art/SVG/Asset 1.svg") 16 16, grabbing';
+                startX = e.pageX - imageContainer.offsetLeft;
+                scrollLeft = imageContainer.scrollLeft;
+            });
+
+            imageContainer.addEventListener('mouseleave', () => {
+                isDown = false;
+                imageContainer.style.cursor = 'url("../art/SVG/Asset 1.svg") 16 16, auto';
+            });
+
+            imageContainer.addEventListener('mouseup', () => {
+                isDown = false;
+                imageContainer.style.cursor = 'url("../art/SVG/Asset 1.svg") 16 16, auto';
+            });
+
+            imageContainer.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - imageContainer.offsetLeft;
+                const walk = (x - startX) * 2; // Scroll speed multiplier
+                imageContainer.scrollLeft = scrollLeft - walk;
+            });
+
+            // Touch events for mobile
+            imageContainer.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].pageX - imageContainer.offsetLeft;
+                scrollLeft = imageContainer.scrollLeft;
+            });
+
+            imageContainer.addEventListener('touchmove', (e) => {
+                if (!startX) return;
+                e.preventDefault();
+                const x = e.touches[0].pageX - imageContainer.offsetLeft;
+                const walk = (x - startX) * 2;
+                imageContainer.scrollLeft = scrollLeft - walk;
+            });
+
+            imageContainer.addEventListener('touchend', () => {
+                startX = null;
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    imageContainer.scrollBy({
+                        left: -400,
+                        behavior: 'smooth'
+                    });
+                } else if (e.key === 'ArrowRight') {
+                    imageContainer.scrollBy({
+                        left: 400,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+
+            // Add scroll indicators
+            const addScrollIndicators = () => {
+                const scrollPercentage = (imageContainer.scrollLeft / (imageContainer.scrollWidth - imageContainer.clientWidth)) * 100;
+                
+                // You can add visual indicators here if needed
+                console.log('Scroll percentage:', scrollPercentage);
+            };
+
+            imageContainer.addEventListener('scroll', addScrollIndicators);
         });
     </script>
 </body>

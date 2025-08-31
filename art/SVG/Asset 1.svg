@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 85.14 85.14">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-family: POICarbonicTrial-Regular, 'POI Carbonic Trial';
+        font-size: 20.05px;
+      }
+    </style>
+  </defs>
+  <g id="text">
+    <g>
+      <path class="cls-1" d="M42.57,85.14C19.1,85.14,0,66.05,0,42.57S19.1,0,42.57,0s42.57,19.1,42.57,42.57-19.1,42.57-42.57,42.57ZM42.57.53C19.39.53.53,19.39.53,42.57s18.86,42.04,42.04,42.04,42.04-18.86,42.04-42.04S65.75.53,42.57.53Z"/>
+      <text class="cls-2" transform="translate(21.34 49.53)"><tspan x="0" y="0">Drag</tspan></text>
+    </g>
+  </g>
+</svg>

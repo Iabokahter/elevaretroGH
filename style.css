@@ -9,7 +9,6 @@
   --color-icon-circle-hover: rgba(255, 255, 255, 0.4);
   --color-icon: #3d3d3d;
   --mainColor: #6b7b68;
-  --portfolio-shade: #16110E;
 
   --background-image-url: url("./images/commingSoon.png");
 }
@@ -318,7 +317,11 @@ section.innerServices {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  
+}
+section.innerServices {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 section.innerServices img {
   position: absolute;
@@ -336,7 +339,7 @@ section.innerServices::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--portfolio-shade);
+  background: var(--mainColor);
   opacity: 0.6;
   z-index: 2;
 }
@@ -421,113 +424,6 @@ section.innerServices .text ul {
   }
 }
 
-
-section.nextproject {
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-
-}
-section.nextproject img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-section.nextproject::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(#000);
-  opacity: 0.6;
-  z-index: 2;
-}
-section.nextproject.contact::after {
-  display: none;
-}
-section.nextproject.contactForm::after {
-  background: #000;
-}
-section.nextproject .container {
-  position: relative;
-  z-index: 3;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  padding-left: 10%;
-}
-section.nextproject .text {
-  max-width: max-content;
-  width: max-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  /* margin-left: auto; */
-  color: var(--mainColor);
-}
-section.nextproject .text h1 {
-  font-size: 56px;
-  letter-spacing: -1px;
-  color: var(--mainColor);
-  font-weight: 500;
-}
-section.nextproject .text p {
-  font-size: 22px;
-  letter-spacing: 0px;
-  color: var(--mainColor);
-  margin-top: 30px;
-  line-height: 1.6;
-}
-section.nextproject .spicealText {
-  position: absolute;
-  bottom: 5%;
-  left: 0%;
-  font-size: 34px;
-  letter-spacing: -1px;
-  color: var(--mainColor);
-  text-align: left;
-}
-section.nextproject.contact .spicealText {
-  font-size: 18px;
-}
-section.nextproject.contact .spicealText h1 {
-  font-size: 64px;
-}
-section.nextproject .text ul {
-  font-size: 22px;
-  letter-spacing: 0px;
-  color: var(--mainColor);
-  padding-left: 30px;
-  margin-top: 30px;
-  gap: 20px;
-  display: flex;
-  flex-direction: column;
-}
-@media (max-width: 1280px) {
-  .mainHeader .navbarHeader .menu ul a {
-    font-size: 14px;
-  }
-  section.nextproject .text h1 {
-    font-size: 30px;
-  }
-  section.nextproject .text ul,
-  section.nextproject .text p {
-    font-size: 14px;
-  }
-  section.nextproject .spicealText {
-    font-size: 22px;
-  }
-  .mainHeader .navbarHeader .logo img {
-    max-width: 32px;
-  }
-}
 .portfolio {
   position: relative;
   height: 100vh;
@@ -761,8 +657,6 @@ section.nextproject .text ul {
   background: white;
   transform: translateY(-2px);
 }
-
-
 
 .nav-menu {
   list-style: none;
@@ -1099,6 +993,69 @@ header.mainHeader.innerGreenFixed.fixedHeader.servicesActive
 header.mainHeader.innerGreenFixed.fixedHeader.servicesActive .line {
   background: #444f42;
 }
+.innerPortfolio {
+  min-height: 100vh;
+}
+.nextproject {
+  min-height: 100vh;
+}
+section.nextproject {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+section.nextproject .container {
+  position: relative;
+  z-index: 3;
+  height: 100vh;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0;
+}
+
+section.nextproject .text {
+  max-width: max-content;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+  color: #444f42;
+}
+
+section.nextproject .text h1 {
+  font-size: 56px;
+  letter-spacing: -1px;
+  color: #444f42;
+  font-weight: 500;
+  margin-bottom: 70px;
+}
+
+section.nextproject .text p {
+  font-size: 22px;
+  letter-spacing: 0px;
+  color: #444f42;
+  margin-bottom: 70px;
+  line-height: 1.6;
+}
+
+section.nextproject .text ul {
+  font-size: 22px;
+  letter-spacing: 0px;
+  color: #444f42;
+  padding-left: 30px;
+  margin-top: 30px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
 
 section {
   display: block;
@@ -1935,49 +1892,49 @@ textarea.form-control {
   transform: translateY(-100%);
 }
 
-section.nextproject.contactForm .container {
+section.innerServices.contactForm .container {
   justify-content: center;
 }
-section.nextproject.contactForm .row {
+section.innerServices.contactForm .row {
   max-width: 100%;
   text-align: left;
-  color: #000;
+  color: #fff;
   width: 80%;
 }
-section.nextproject.contactForm form label,
-section.nextproject.contactForm h1 {
-  color: #000;
+section.innerServices.contactForm form label,
+section.innerServices.contactForm h1 {
+  color: #fff;
 }
-section.nextproject.contactForm h1 {
+section.innerServices.contactForm h1 {
   font-size: 50px;
   margin-bottom: 60px;
 }
-section.nextproject.contactForm .form-control {
+section.innerServices.contactForm .form-control {
   border: 1px solid #fff;
   border-radius: 0;
 }
-section.nextproject.contactForm form {
+section.innerServices.contactForm form {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
   flex-wrap: wrap;
 }
-section.nextproject.contactForm .form-group {
+section.innerServices.contactForm .form-group {
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 28%;
 }
-section.nextproject.contactForm .form-group input {
+section.innerServices.contactForm .form-group input {
   padding: 10px;
 }
-section.nextproject.contactForm .form-group input::placeholder {
+section.innerServices.contactForm .form-group input::placeholder {
   color: #ffffffcc;
   font-size: 12px;
 }
-section.nextproject.contactForm form button {
+section.innerServices.contactForm form button {
   width: 100%;
   flex: 1;
   margin: 0 !important;
@@ -1985,7 +1942,7 @@ section.nextproject.contactForm form button {
   padding: 0;
   margin-top: 40px !important;
 }
-section.nextproject.contactForm form button span {
+section.innerServices.contactForm form button span {
   width: max-content;
   min-width: 22%;
 }
@@ -2132,16 +2089,16 @@ section.nextproject.contactForm form button span {
   .portfolio .portfolioList li:nth-child(10) {
     border-bottom: 0.5px solid #fff;
   }
-  section.nextproject .row {
+  section.innerServices .row {
     width: 100%;
   }
   .portfolioText {
     flex-direction: column;
   }
-  section.nextproject .text {
+  section.innerServices .text {
     padding-top: 100px;
   }
-  section.nextproject .container {
+  section.innerServices .container {
     justify-content: start;
   }
   .header-row,
@@ -2152,26 +2109,26 @@ section.nextproject.contactForm form button span {
   .section-container:nth-child(3) .content-row .content-cell:nth-child(1) img {
     max-width: 100%;
   }
-  section.nextproject .text {
+  section.innerServices .text {
     width: 100%;
   }
-  section.nextproject .spicealText {
+  section.innerServices .spicealText {
     bottom: 20%;
     left: 5%;
   }
-  section.nextproject.contactForm .row {
+  section.innerServices.contactForm .row {
     width: 100%;
   }
-  section.nextproject.contactForm h1 {
+  section.innerServices.contactForm h1 {
     font-size: 32px;
   }
-  section.nextproject.contactForm form {
+  section.innerServices.contactForm form {
     gap: 3px;
     flex-direction: column;
     align-items: start;
   }
-  section.nextproject.contactForm .form-group input,
-  section.nextproject.contactForm .form-group {
+  section.innerServices.contactForm .form-group input,
+  section.innerServices.contactForm .form-group {
     width: 100%;
   }
   section#services {
