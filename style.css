@@ -316,8 +316,10 @@ swiper-slide img {
   color: #fff;
 }
 
+
 .ourStory {
-  padding: 400px;
+  padding-top: 400px;
+  padding-bottom: 400px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -351,11 +353,49 @@ swiper-slide img {
 .ourStory h1 b {
   font-weight: 600;
 }
+.ourStory .paragraphs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+.ourStory .paragraphs-row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
+  width: 100%;
+}
+.ourStory .paragraphs-containers {
+  display: flex;
+  justify-content: start;
+
+  max-width: 125px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .ourStory .paragraphs-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .ourStory .paragraphs-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
 .ourStory p {
   max-width: 427px;
   font-size: 18px;
   color: #647261;
-  text-align: justify;
+  text-align: start;
+  margin: 0;
+  margin-bottom: 20px;
+  flex-shrink: 0;
 }
 .ourStory p b {
   color: #4f5c4d;
@@ -473,7 +513,7 @@ section.innerServices::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--mainColor);
+  background: #000;
   opacity: 0.6;
   z-index: 2;
 }
@@ -483,6 +523,7 @@ section.innerServices.contact::after {
 section.innerServices.contactForm::after {
   background: #000;
 }
+
 section.innerServices .container {
   position: relative;
   z-index: 3;
@@ -490,7 +531,7 @@ section.innerServices .container {
   display: flex;
   align-items: center;
   justify-content: start;
-  padding-left: 10%;
+
 }
 section.innerServices .text {
   max-width: max-content;
@@ -878,12 +919,11 @@ section.innerServices .text ul {
   background: #fff;
 }
 .mainHeader.menuOpen .navbarHeader .logo img {
-  filter: invert(1);
+  filter: brightness(0) saturate(100%) invert(27%) sepia(7%) saturate(617%) hue-rotate(55deg) brightness(95%) contrast(90%);
 }
 .mainHeader.menuOpen .line {
   background-color: var(--mainColor);
 }
-
 .section-container {
   display: grid;
   grid-template-rows: auto auto auto;
@@ -1554,7 +1594,6 @@ textarea.form-control {
   color: #666;
   font-weight: 400;
 }
-
 .cursor {
   position: fixed;
   top: 0;
@@ -1564,10 +1603,10 @@ textarea.form-control {
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: transform 0.15s ease-out;
+  transition: width 0.2s ease, height 0.2s ease, background 0.15s ease;
   z-index: 1000;
   background: url("./art/SVG/cursor.svg") center center no-repeat;
-  background-size: auto;
+  background-size: contain;
 }
 .cursor {
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.1s ease;
@@ -1630,7 +1669,7 @@ textarea.form-control {
 .hero .slideContent img {
   max-width: 85%;
   margin-top: -30px;
-  margin-left: 80px;
+  margin-left: 50px;
   margin-bottom: 50px;
 }
 /* Controls container */

@@ -52,18 +52,21 @@
                         </div>
                         <div class="menu">
                             <ul>
-                                <li>
-                                    <a href="">COMMUNITY</a>
-                                </li>
-                                <li>
+                                 <li>
                                     <a href="" class="aboutSection">ABOUT</a>
-                                </li>
-                                <li>
-                                    <a href="../portfolio.html">PORTFOILO</a>
                                 </li>
                                 <li>
                                     <a href="../index.html#services">SERVICES</a>
                                 </li>
+                                
+                                <li>
+                                    <a href="../portfolio.html">PORTFOILO</a>
+                                </li>
+                                <li>
+                                    <a href="">COMMUNITY</a>
+                                </li>
+                               
+                                
                                 <li>
                                     <a href="../contact.html" class="contactSection"> CONTACT US</a>
                                 </li>
@@ -95,7 +98,7 @@
 
                     <div class="infoItem">
                         <h4>Address</h4>
-                        <a href="www.googlemaps.com" target="_blank">KSA - Jeddah</a>
+                        <a href="www.googlemaps.com" target="_blank">Jeddah, KSA</a>
                     </div>
                 </div>
 
@@ -103,7 +106,7 @@
                     For each project the approach rests on a careful understanding of the space, or the site's.
                 </div>
 
-                <button class="send-request-btn-portfolio">SEND REQUEST</button>
+                <button class="send-request-btn" onclick="window.location.href='../contact.html'" >SEND REQUEST</button>
             </div>
 
             <div class="menu-right">
@@ -155,7 +158,7 @@
                             <div class="contact-info">
                                 <div class="infoItem" data-aos="fade-right" data-aos-delay="600">
                                     <h4>Location</h4>
-                                    <a href="www.googlemaps.com" target="_blank">KSA - Jeddah</a>
+                                    <a href="www.googlemaps.com" target="_blank">Jeddah, KSA</a>
                                 </div>
                                 <div class="infoItem" data-aos="fade-right" data-aos-delay="800">
                                     <h4>Square meters</h4>
@@ -400,12 +403,15 @@
             if (sectionContainer) {
                 sectionContainer.addEventListener("mouseenter", () => {
                     cursor.style.backgroundImage = "url('../art/SVG/Asset 1.svg')";
-                    cursor.style.backgroundSize = "auto";
+                    cursor.style.width = "60px";   // grow
+                    cursor.style.height = "60px";  // grow
                 });
 
                 sectionContainer.addEventListener("mouseleave", () => {
                     cursor.style.backgroundImage = "url('../art/SVG/cursor.svg')";
-                    cursor.style.backgroundSize = "auto";
+                    cursor.style.width = "40px";   // shrink back
+                    cursor.style.height = "40px";  // shrink back      
+                    
                 });
             }
 

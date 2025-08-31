@@ -65,7 +65,7 @@
     <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="logo-container">
-            <div class="logo"><img src="./images/logo.png" alt="logo"></div>
+            <div class="logo"><img src="./art/SVG/logowhite.svg" style="width:50px; height: 50px;" alt="logo"></div>
         </div>
         <!-- <div class="loading-text">Loading...</div> -->
     </div>
@@ -78,7 +78,7 @@
                         <div class="navbarHeader">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="./art/SVG/logowhite.svg" alt="logo" style="width:50px; height: 50px;">
+                                    <img src="./art/SVG/logowhite.svg" alt="logo" style="width:50px;" height: 50px;">
                                     <img src="./art/SVG/Asset 5.svg" class="greenLogo" alt="logo" style="width: 50px; height: 50px;">
                                 </a>
                             </div>
@@ -129,7 +129,7 @@
 
                         <div class="infoItem">
                             <h4>Address</h4>
-                            <a href="www.googlemaps.com" target="_blank">Jeddah,KSA</a>
+                            <a href="www.googlemaps.com" target="_blank">Jeddah, KSA</a>
                         </div>
                     </div>
 
@@ -137,7 +137,7 @@
                         For each project the approach rests on a careful understanding of the space, or the site's.
                     </div>
 
-                    <button class="btn btn-2 hover-slide-right">
+                    <button class="btn btn-2 hover-slide-right" onclick="window.location.href='contact.html'">
                         <span>SEND REQUEST</span>
                     </button>
                 </div>
@@ -313,7 +313,7 @@
 
                                     <div class="info-item">
                                         <div class="info-label">ADDRESS</div>
-                                        <div class="info-value">Jeddah,KSA</div>
+                                        <div class="info-value">Jeddah, KSA</div>
                                     </div>
 
                                     <div class="info-item">
@@ -364,11 +364,10 @@
         <section class="ourStory">
             <div class="container">
                 <div class="row px-5">
-                    <div class="col-12 header">
-                        
+                    <div class="paragraphs-container">
                         <h1 data-aos="fade-up" data-aos-delay="100"><b> OUR </b> - STORY</h1>
-                    </div>
-                    <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
+                        <div class="paragraphs-row">
+                            <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
                         
                         <p><b>Elevaretro</b> started from a simple dream and a genuine passion to transform ideas into
                             tangible
@@ -392,6 +391,8 @@
                             always aligned with the client’s vision and objectives. We are proud of our journey, and we
                             welcome every new challenge as an opportunity to demonstrate that passion and honesty.                     
                         </p>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -734,6 +735,8 @@
                     } else {
                         mainHeader.classList.remove("servicesActive");
                     }
+                    hamburgerBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
                 }
             });
         });
