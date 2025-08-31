@@ -28,16 +28,14 @@
     <!-- fancyBox CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 
-    <!-- jQuery (مطلوب لـ fancyBox) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <!-- fancyBox JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="../style.css">
-
 
 </head>
 
@@ -131,6 +129,7 @@
             </div>
         </div>
     </div>
+
     <section class="innerServices">
         <img src="../art/4x/portfolio@4x.webp" alt="img-fluid">
         <div class="container">
@@ -140,17 +139,17 @@
                         <h1 data-aos="fade-right" data-aos-delay="200">Jet Avation Brief</h1>
                         <div class="portfolioText">
                             <p data-aos="fade-right" data-aos-delay="400">
-                                started from a simple dream and a genuine 
+                                started from a simple dream and a genuine
                                 passion to transform ideas into tangible <br>
-                                spaces that reflect soul and authenticity. In 
+                                spaces that reflect soul and authenticity. In
                                 the beginning, we were a small group of <br>
-                                professionals who believed that every space 
+                                professionals who believed that every space
                                 has a story, and that executing it with care <br>
-                                and precision brings that story to life. 
+                                and precision brings that story to life.
                                 Through our first projects, we realized that <br>
-                                true quality is not only about materials or 
+                                true quality is not only about materials or
                                 construction techniques — it is about the <br>
-                                thoughtful attention to the execution details 
+                                thoughtful attention to the execution details
                                 that add emotional value to the space.
                             </p>
                             <div class="contact-info">
@@ -167,13 +166,12 @@
                                     <p>Completed in March 2026</p>
                                 </div>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="socialLInks" data-aos="fade-right" data-aos-delay="800">
+        <div class="socialLInks">
             <span>Share : </span>
             <ul>
                 <li></li>
@@ -205,68 +203,134 @@
                 </li>
             </ul>
         </div>
+        <!-- Open Gallery Button -->
+        <div class="gallery-button-container">
+            <button id="openGalleryBtn" class="btn btn-2 hover-slide-right m-0">
+                <span>
+                    OPEN GALLERY
+                </span>
+            </button>
+        </div>
     </section>
 
-
-    <section class="innerPortfolio">
-        <div class="section-container">
-            
-
-            
-                <div class="content-cell image-container">
-                    <a href="../art/JetAviation/4x/Asset 3.webp" data-fancybox="gallery" data-caption="Primary Lounge"
-                        data-aos="fade-in" data-aos-delay="300">
-
-                        <img src="../art/JetAviation/4x/Asset 3.webp" alt="Primary Lounge">
-
-                        
-                        <div class="text">
-                            
-
-                       <h1 >SPACE NAME GE 290</h1>
-                       <p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit,</p>
-                        </div>
-
-                    </a>
-                </div>
-            </div>
-
-            
-       
-        
-        
-    </section>
-
-    <section class="nextproject">
-        
-       
+    <section class="innerPortfolio sliderPortfolio py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="text">
-                        <h1 data-aos="fade-right" data-aos-delay="200">Your next project starts Here</h1>
-
-                        <p data-aos="fade-right" data-aos-delay="300">
-                                For each project the approach rests on a careful
-                                understanding of the space . <br>
-                        </p>
-
-
-                            
-
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <a href="../art/JetAviation/4x/Asset 11.webp" data-fancybox="gallery"
+                            data-caption="Primary Lounge">
+                            <div class="image-container">
+                                <img src="../art/JetAviation/4x/Asset 11.webp" alt="Primary Lounge">
+                            </div>
+                            <div class="text">
+                                <h1>PRIMARY LOUNGE SPACE</h1>
+                                <p>Experience the ultimate in comfort and sophistication with our premium lounge
+                                    featuring modern amenities and elegant design for discerning travelers.</p>
+                            </div>
+                        </a>
                     </div>
-                    <p data-aos="fade-right" data-aos-delay="400">
 
-                    <button class="btn btn-2 hover-slide-right" style="color: #000">
-                        <span style="border-color:#535c51; color:#535c51">SEND REQUEST</span>
-                    </button>
-                </p>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <a href="../art/JetAviation/4x/Asset 10.webp" data-fancybox="gallery"
+                            data-caption="Executive Suite">
+                            <div class="image-container">
+                                <img src="../art/JetAviation/4x/Asset 10.webp" alt="Executive Suite">
+                            </div>
+                            <div class="text">
+                                <h1>EXECUTIVE SUITE GE 290</h1>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                                    euismod tincidunt ut laoreet dolore magna.</p>
+                            </div>
+                        </a>
+                    </div>
 
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <a href="../art/JetAviation/4x/Asset 3.webp" data-fancybox="gallery"
+                            data-caption="Conference Room">
+                            <div class="image-container">
+                                <img src="../art/JetAviation/4x/Asset 3.webp" alt="Conference Room">
+                            </div>
+                            <div class="text">
+                                <h1>CONFERENCE ROOM ELITE</h1>
+                                <p>State-of-the-art meeting facilities designed for productive business gatherings with
+                                    cutting-edge technology integration and premium comfort.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide">
+                        <a href="../art/JetAviation/4x/Asset 4.webp" data-fancybox="gallery"
+                            data-caption="Private Office">
+                            <div class="image-container">
+                                <img src="../art/JetAviation/4x/Asset 4.webp" alt="Private Office">
+                            </div>
+                            <div class="text">
+                                <h1>PRIVATE OFFICE SPACE</h1>
+                                <p>Exclusive workspace solution providing privacy and tranquility for focused work
+                                    sessions and important client meetings in luxurious surroundings.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide">
+                        <a href="../art/JetAviation/4x/Asset 5.webp" data-fancybox="gallery"
+                            data-caption="Relaxation Area">
+                            <div class="image-container">
+                                <img src="../art/JetAviation/4x/Asset 5.webp" alt="Relaxation Area">
+                            </div>
+                            <div class="text">
+                                <h1>RELAXATION ZONE</h1>
+                                <p>Unwind in our carefully curated relaxation space featuring comfortable seating and
+                                    ambient lighting for ultimate comfort and rejuvenation.</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide">
+                        <a href="../art/JetAviation/4x/Asset 6.webp" data-fancybox="gallery"
+                            data-caption="Modern Workspace">
+                            <div class="image-container">
+                                <img src="../art/JetAviation/4x/Asset 6.webp" alt="Modern Workspace">
+                            </div>
+                            <div class="text">
+                                <h1>MODERN WORKSPACE HUB</h1>
+                                <p>Contemporary office environment designed for collaboration and innovation with
+                                    flexible layouts and modern furnishings that inspire creativity.</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="nextproject">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="text">
+                        <h1 data-aos="fade-right" data-aos-delay="200">Your next project starts<br> Here</h1>
+                        <p data-aos="fade-right" data-aos-delay="300">
+                            For each project the approach rests on a careful
+                            understanding of the space . <br>
+                        </p>
+                    </div>
+                    <p data-aos="fade-right" data-aos-delay="400">
+                        <button class="btn btn-2 hover-slide-right" style="color: #000">
+                            <span style="border-color:#535c51; color:#535c51">SEND REQUEST</span>
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="main-footer">
         <div class="footer-content">
@@ -284,62 +348,79 @@
             </div>
             <div class="right-section">
                 <a href="/">
-                    <img src="../images/elevartro.png" alt="Elevaretro Contracting Logo" class="elevaretro-logo">
-                </a>
+                <img src="../art/SVG/Asset 4.svg" width="200" height="150" alt="Elevaretro Contracting Logo" class="elevaretro-logo"> 
+
+            </a>
             </div>
         </div>
     </footer>
+
     <div class="cursor"></div>
 
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+
+    <!-- fancyBox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
+        // Custom cursor functionality
         const cursor = document.querySelector(".cursor");
         const header = document.querySelector(".mainHeader");
-        const sectionContainer = document.querySelector(".section-container");
+        const sectionContainer = document.querySelector(".innerPortfolio");
         let mouseX = 0, mouseY = 0;
         let cursorX = 0, cursorY = 0;
 
-        // إضافة transition للكورسر في CSS أو هنا
-        cursor.style.transition = "opacity 0.3s ease, visibility 0.3s ease, background-image 0.3s ease";
+        if (cursor) {
+            cursor.style.transition = "opacity 0.3s ease, visibility 0.3s ease, background-image 0.3s ease";
 
-        document.addEventListener("mousemove", e => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        // إخفاء الكورسر مع انيميشن
-        header.addEventListener("mouseenter", () => {
-            cursor.style.opacity = "0";
-            cursor.style.visibility = "hidden";
-        });
-
-        // إظهار الكورسر مع انيميشن
-        header.addEventListener("mouseleave", () => {
-            cursor.style.opacity = "1";
-            cursor.style.visibility = "visible";
-        });
-
-        // Change cursor image when hovering over section-container or its children
-        if (sectionContainer) {
-            sectionContainer.addEventListener("mouseenter", () => {
-                cursor.style.backgroundImage = "url('../art/SVG/Asset 1.svg')";
-                cursor.style.backgroundSize = "auto";
+            document.addEventListener("mousemove", e => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
             });
 
-            sectionContainer.addEventListener("mouseleave", () => {
-                cursor.style.backgroundImage = "url('../art/SVG/cursor.svg')";
-                cursor.style.backgroundSize = "auto";
-            });
+            // Hide cursor on header hover
+            if (header) {
+                header.addEventListener("mouseenter", () => {
+                    cursor.style.opacity = "0";
+                    cursor.style.visibility = "hidden";
+                });
+
+                header.addEventListener("mouseleave", () => {
+                    cursor.style.opacity = "1";
+                    cursor.style.visibility = "visible";
+                });
+            }
+
+            // Change cursor image when hovering over portfolio section
+            if (sectionContainer) {
+                sectionContainer.addEventListener("mouseenter", () => {
+                    cursor.style.backgroundImage = "url('../art/SVG/Asset 1.svg')";
+                    cursor.style.backgroundSize = "auto";
+                });
+
+                sectionContainer.addEventListener("mouseleave", () => {
+                    cursor.style.backgroundImage = "url('../art/SVG/cursor.svg')";
+                    cursor.style.backgroundSize = "auto";
+                });
+            }
+
+            function animate() {
+                cursorX += (mouseX - cursorX) * 0.1;
+                cursorY += (mouseY - cursorY) * 0.1;
+                cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+                requestAnimationFrame(animate);
+            }
+            animate();
         }
 
-        function animate() {
-            cursorX += (mouseX - cursorX) * 0.1;
-            cursorY += (mouseY - cursorY) * 0.1;
-            cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
-            requestAnimationFrame(animate);
-        }
-        animate();
-    </script>
-    <script>
+        // Header scroll functionality
         document.addEventListener("DOMContentLoaded", function () {
             const mainHeader = document.querySelector(".mainHeader");
             const mobileMenu = document.getElementById('mobileMenu');
@@ -352,43 +433,41 @@
                     mainHeader.classList.add("fixedHeader");
                 } else {
                     mainHeader.classList.remove("fixedHeader");
-                    mobileMenu.classList.remove('active');
-                    hamburgerBtn.classList.remove('active');
+                    if (mobileMenu) mobileMenu.classList.remove('active');
+                    if (hamburgerBtn) hamburgerBtn.classList.remove('active');
                 }
             });
         });
-    </script>
 
-    <script>
+        // Mobile menu functionality
         const hamburgerBtn = document.getElementById('hamburgerBtn');
         const mobileMenu = document.getElementById('mobileMenu');
 
-        // Toggle menu with hamburger button
-        hamburgerBtn.addEventListener('click', function () {
-            this.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
+        if (hamburgerBtn && mobileMenu) {
+            // Toggle menu with hamburger button
+            hamburgerBtn.addEventListener('click', function () {
+                this.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
 
-        });
+            // Close menu when clicking outside
+            mobileMenu.addEventListener('click', function (event) {
+                if (event.target === mobileMenu) {
+                    hamburgerBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                }
+            });
 
-        // Close menu when clicking outside
-        mobileMenu.addEventListener('click', function (event) {
-            if (event.target === mobileMenu) {
-                hamburgerBtn.classList.remove('active');
-                mobileMenu.classList.remove('active');
+            // Close with Escape key
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    hamburgerBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        }
 
-            }
-        });
-
-        // Close with Escape key
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape') {
-                hamburgerBtn.classList.remove('active');
-                mobileMenu.classList.remove('active');
-            }
-        });
-    </script>
-
-    <script>
+        // About and Contact button functionality
         const aboutHeaderBtn = document.querySelector('.aboutSection');
         const contactHeaderBtn = document.querySelector('.contactSection');
 
@@ -405,13 +484,57 @@
                 window.location.href = '../contact.html';
             });
         }
-    </script>
 
-    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: false
+        });
+
+        // Initialize Swiper
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 24,
+            grabCursor: true,
+            freeMode: true,
+            freeModeSticky: true,
+            freeModeMomentum: true,
+            freeModeMinimumVelocity: 0.02,
+            freeModeVelocityRatio: 0.5,
+            mousewheel: {
+                enabled: true,
+                forceToAxis: true,
+                sensitivity: 0.5,
+                thresholdDelta: 50,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 16,
+                },
+                480: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 16,
+                },
+                768: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 24,
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 24,
+                }
+            }
+        });
+
+        // Initialize Fancybox and Open Gallery Button
         $(document).ready(function () {
-            // تفعيل fancyBox
+            // Initialize Fancybox
             $('[data-fancybox]').fancybox({
-                // خيارات التخصيص
                 buttons: [
                     "zoom",
                     "slideShow",
@@ -421,102 +544,14 @@
                 loop: true,
                 protect: true,
                 animationEffect: "fade",
-                transitionEffect: "slide",
-                // إضافة تأثيرات
-                btnTpl: {
-                    download: '<a download data-fancybox-download class="fancybox-button fancybox-button--download" title="{{DOWNLOAD}}" href="javascript:;"><svg><path d="M15.707 7.293L9 14l-6.707-6.707 1.414-1.414L9 11.172l5.293-5.293z"/></svg></a>'
-                }
-            });
-        });
-    </script>
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000, // animation duration
-            once: false     // false = animate every time you scroll up/down
-        });
-    </script>
-
-    <!-- Horizontal Image Swipe Functionality -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const imageContainer = document.querySelector('.section-container');
-            
-            if (!imageContainer) return;
-
-            let isDown = false;
-            let startX;
-            let scrollLeft;
-
-            // Mouse events for desktop
-            imageContainer.addEventListener('mousedown', (e) => {
-                isDown = true;
-                imageContainer.style.cursor = 'url("../art/SVG/Asset 1.svg") 16 16, grabbing';
-                startX = e.pageX - imageContainer.offsetLeft;
-                scrollLeft = imageContainer.scrollLeft;
+                transitionEffect: "slide"
             });
 
-            imageContainer.addEventListener('mouseleave', () => {
-                isDown = false;
-                imageContainer.style.cursor = 'url("../art/SVG/Asset 1.svg") 16 16, auto';
+            // Open Gallery Button functionality
+            $('#openGalleryBtn').on('click', function () {
+                // Trigger the first gallery image to open the entire gallery
+                $('[data-fancybox="gallery"]:first').trigger('click');
             });
-
-            imageContainer.addEventListener('mouseup', () => {
-                isDown = false;
-                imageContainer.style.cursor = 'url("../art/SVG/Asset 1.svg") 16 16, auto';
-            });
-
-            imageContainer.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - imageContainer.offsetLeft;
-                const walk = (x - startX) * 2; // Scroll speed multiplier
-                imageContainer.scrollLeft = scrollLeft - walk;
-            });
-
-            // Touch events for mobile
-            imageContainer.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].pageX - imageContainer.offsetLeft;
-                scrollLeft = imageContainer.scrollLeft;
-            });
-
-            imageContainer.addEventListener('touchmove', (e) => {
-                if (!startX) return;
-                e.preventDefault();
-                const x = e.touches[0].pageX - imageContainer.offsetLeft;
-                const walk = (x - startX) * 2;
-                imageContainer.scrollLeft = scrollLeft - walk;
-            });
-
-            imageContainer.addEventListener('touchend', () => {
-                startX = null;
-            });
-
-            // Keyboard navigation
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') {
-                    imageContainer.scrollBy({
-                        left: -400,
-                        behavior: 'smooth'
-                    });
-                } else if (e.key === 'ArrowRight') {
-                    imageContainer.scrollBy({
-                        left: 400,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-
-            // Add scroll indicators
-            const addScrollIndicators = () => {
-                const scrollPercentage = (imageContainer.scrollLeft / (imageContainer.scrollWidth - imageContainer.clientWidth)) * 100;
-                
-                // You can add visual indicators here if needed
-                console.log('Scroll percentage:', scrollPercentage);
-            };
-
-            imageContainer.addEventListener('scroll', addScrollIndicators);
         });
     </script>
 </body>
