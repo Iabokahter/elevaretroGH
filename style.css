@@ -1,8 +1,169 @@
 /* --- المتغيرات العامة للمشروع --- */
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* --- POI Carbonic Trial Font Face Declarations --- */
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-Thin.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-Thin.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-ThinItalic.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-ThinItalic.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-ExtraLight.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-ExtraLight.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-ExtraLightItalic.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-ExtraLightItalic.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-Light.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-Light.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-LightItalic.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-LightItalic.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-Regular.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-Regular.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-Italic.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-Italic.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-Medium.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-Medium.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-MediumItalic.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-MediumItalic.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-SemiBold.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-SemiBold.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-SemiBoldItalic.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-SemiBoldItalic.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-Bold.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-Bold.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-BoldItalic.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-BoldItalic.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-ExtraBold.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-ExtraBold.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "POI Carbonic Trial";
+  src: url("./fonts/POICarbonicTrial-ExtraBoldItalic.woff2") format("woff2"),
+       url("./fonts/POICarbonicTrial-ExtraBoldItalic.woff") format("woff"),
+       url("./fonts/POICarbonicTrial-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
 :root {
-  --font-logo: "POI Carbonic Trial", sans-serif;
-  --font-subtitle: "POI Carbonic Trial", sans-serif;
+  --font-logo: "POI Carbonic Trial";
+  --font-subtitle: "POI Carbonic Trial";
   --color-text-light: #ffffff;
   --color-footer-bg: #c3c3b7;
   --color-icon-circle-bg: rgba(255, 255, 255, 0.25);
@@ -13,10 +174,13 @@
   --background-image-url: url("./images/commingSoon.png");
 }
 
+
+
+
 @media (min-width: 1400px) {
   .container,
   .container-lg,
-  .container-md,
+  .container-md, 
   .container-sm,
   .container-xl,
   .container-xxl {
@@ -30,7 +194,7 @@
   .container-md,
   .container-sm,
   .container-xl {
-    max-width: 95%;
+    max-width: 87%;
   }
 }
 ul,
@@ -115,7 +279,7 @@ swiper-slide img {
 .mainHeader .navbarHeader .menu ul a {
   color: #fff;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 100;
   text-transform: uppercase;
   text-decoration: none;
   transition: 0.3s ease;
@@ -123,8 +287,8 @@ swiper-slide img {
   padding-bottom: 5px;
 }
 .mainHeader .navbarHeader .menu ul a:hover {
-  color: #6b7b68;
-  border-color: #6b7b68;
+  color: #fff;
+  border-color: #fff;
 }
 .mainHeader .navbarHeader .logo img {
   max-width: 40px;
@@ -185,7 +349,7 @@ swiper-slide img {
 }
 
 .ourStory {
-  padding: 230px;
+  padding: 400px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -214,7 +378,7 @@ swiper-slide img {
   letter-spacing: -1px;
   color: #4f5c4d;
   font-weight: 100;
-  margin-bottom: 40px;
+  margin-bottom: 90px;
 }
 .ourStory h1 b {
   font-weight: 600;
@@ -970,7 +1134,7 @@ section.innerServices .text ul {
   backdrop-filter: blur(10px);
   z-index: 1000;
   padding: 10px;
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid transparent;
 }
 .greenLogo {
   display: none;
@@ -1162,6 +1326,8 @@ section {
 .heroModel .sectionLinks {
   display: flex;
   width: 100%;
+  justify-content: space-between;
+
   background: #fff;
   position: relative;
 }
@@ -1171,6 +1337,7 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
+  justify-content: flex-end;
 }
 .heroModel .sectionLinks .active .arrowLinks {
   transform: translate(-50%, -50%) rotate(180deg);
@@ -1190,6 +1357,23 @@ section {
   transition: 0.3s ease;
   font-weight: 600;
   padding: 30px;
+  text-align: left;
+}
+.heroModel .sectionLinkss button {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 19px;
+  letter-spacing: 0px;
+  color: #4f5c4d;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 100%;
+  transition: 0.3s ease;
+  font-weight: 600;
+  padding: 30px;
+  text-align: right;
 }
 .heroModel .content.active {
   height: 70vh;
@@ -1204,6 +1388,16 @@ section {
   display: none;
 }
 .heroModel .sectionLinks button.active {
+  text-align: right;
+}
+
+.heroModel .sectionLinks button#forContact {
+  text-align: right;
+}
+.heroModel .sectionLinkss button.hide {
+  display: none;
+}
+.heroModel .sectionLinkss button.active {
   text-align: right;
 }
 .contact-container {
@@ -1481,6 +1675,7 @@ textarea.form-control {
 .hero .slideContent img {
   max-width: 85%;
   margin-top: -30px;
+  margin-left: 80px;
   margin-bottom: 50px;
 }
 /* Controls container */
