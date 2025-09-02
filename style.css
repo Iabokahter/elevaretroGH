@@ -520,9 +520,12 @@ section.innerServices::after {
 section.innerServices.contact::after {
   display: none;
 }
-section.innerServices.contactForm::after {
+section.jetavationPage::after {
   background: #000;
 }
+
+/* Align container content to start ONLY for Jetavation page */
+
 
 section.innerServices .container {
   position: relative;
@@ -535,6 +538,11 @@ section.innerServices .container {
   padding-left: 35%;
 
 }
+section.jetavationPage .container {
+  justify-content: start;
+  padding-left: 0;
+}
+
 section.innerServices .text {
   max-width: max-content;
   width: max-content;
