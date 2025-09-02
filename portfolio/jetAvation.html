@@ -39,7 +39,7 @@
 
 </head>
 
-<body class="homepage">
+<body class="homepage portfolioInner">
     <header class="mainHeader innerGreenFixed">
         <div class="container">
             <div class="row">
@@ -56,7 +56,7 @@
                                     <a href="" class="aboutSection">ABOUT</a>
                                 </li>
                                 <li>
-                                    <a href="../index.html#services">SERVICES</a>
+                                    <a href="../services.html">SERVICES</a>
                                 </li>
                                 
                                 <li>
@@ -106,7 +106,9 @@
                     For each project the approach rests on a careful understanding of the space, or the site's.
                 </div>
 
-                <button class="send-request-btn" onclick="window.location.href='../contact.html'" >SEND REQUEST</button>
+                <button class="btn btn-2 hover-slide-right" onclick="window.location.href='contact.html'">
+                        <span>SEND REQUEST</span>
+                </button>
             </div>
 
             <div class="menu-right">
@@ -116,13 +118,13 @@
                             <a href="index.html" class="aboutSection">ABOUT</a>
                         </li>
                         <li>
-                            <a href="">COMMUNITY</a>
+                            <a href="../services.html">SERVICES</a>
                         </li>
                         <li>
                             <a href="../portfolio.html">PORTFOILO</a>
                         </li>
                         <li>
-                            <a href="../index.html#services">SERVICES</a>
+                            <a href="">COMMUNITY</a>
                         </li>
                         <li>
                             <a href="../contact.html"> CONTACT US</a>
@@ -133,7 +135,7 @@
         </div>
     </div>
 
-    <section class="innerServices">
+    <section class="innerServices innerPortfolio">
         <img src="../art/4x/portfolio@4x.webp" alt="img-fluid">
         <div class="container">
             <div class="row">
@@ -157,15 +159,15 @@
                             </p>
                             <div class="contact-info">
                                 <div class="infoItem" data-aos="fade-right" data-aos-delay="600">
-                                    <h4>Location</h4>
+                                    <img src="../images/location.webp" alt="location">
                                     <a href="www.googlemaps.com" target="_blank">Jeddah, KSA</a>
                                 </div>
                                 <div class="infoItem" data-aos="fade-right" data-aos-delay="800">
-                                    <h4>Square meters</h4>
+                                    <img src="../images/area.webp" alt="Area">
                                     <p>1224,432 m</p>
                                 </div>
                                 <div class="infoItem" data-aos="fade-right" data-aos-delay="1000">
-                                    <h4>Date</h4>
+                                    <img src="../images/calender.webp" alt="Calender">
                                     <p>Completed in March 2026</p>
                                 </div>
                             </div>
@@ -177,8 +179,6 @@
         <div class="socialLInks">
             <span>Share : </span>
             <ul>
-                <li></li>
-                <li></li>
                 <li></li>
                 <li></li>
                 <li></li>
@@ -321,7 +321,7 @@
                     <div class="text">
                         <h1 data-aos="fade-right" data-aos-delay="200">Your next project starts<br> Here</h1>
                         <p data-aos="fade-right" data-aos-delay="300">
-                            For each project the approach rests on a careful
+                            For each project the approach rests on a careful<br>
                             understanding of the space . <br>
                         </p>
                     </div>
@@ -374,7 +374,7 @@
         // Custom cursor functionality
         const cursor = document.querySelector(".cursor");
         const header = document.querySelector(".mainHeader");
-        const sectionContainer = document.querySelector(".innerPortfolio");
+        const sectionContainer = document.querySelector(".sliderPortfolio ");
         let mouseX = 0, mouseY = 0;
         let cursorX = 0, cursorY = 0;
 
@@ -403,8 +403,8 @@
             if (sectionContainer) {
                 sectionContainer.addEventListener("mouseenter", () => {
                     cursor.style.backgroundImage = "url('../art/SVG/Asset 1.svg')";
-                    cursor.style.width = "60px";   // grow
-                    cursor.style.height = "60px";  // grow
+                    cursor.style.width = "80px";   // grow
+                    cursor.style.height = "80px";  // grow
                 });
 
                 sectionContainer.addEventListener("mouseleave", () => {

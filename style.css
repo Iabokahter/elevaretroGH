@@ -542,20 +542,25 @@ section.innerServices .text {
   /* margin-left: auto; */
   color: #fff;
 }
+section.innerServices.innerPortfolio .text{
+  margin-left: 10%;
+}
 section.innerServices .text h1 {
-  font-size: 56px;
-  letter-spacing: -1px;
+  font-size: 50px;
+  letter-spacing: 0px;
   color: #ffffff;
   font-weight: 500;
 }
 section.innerServices .text p {
-  font-size: 22px;
+  font-size: 14px;
   font-weight: 200;
   letter-spacing: 0px;
   color: #ffffff;
   margin-top: 30px;
-  word-spacing: 10px;
+  word-spacing: 1px;
   line-height: 1.6;
+  font-weight: 100;
+  max-width: 80%;
 }
 section.innerServices .spicealText {
   position: absolute;
@@ -687,8 +692,15 @@ section.innerServices .text ul {
   color: #fff;
 }
 .portfolio .portfolioList li a h2 {
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: 400;
   color: #fff;
+}
+.portfolio .portfolioList li a img {
+    max-width: 20px;
+}
+.portfolio .portfolioList li a h2 .highlight {
+  font-weight: 200; /* makes Project bolder */
 }
 .portfolio .portfolioList li a div {
   margin: auto;
@@ -800,9 +812,12 @@ section.innerServices .text ul {
 
 .contact-info h4 {
   font-size: 14px;
-  color: #ccc;
+  color: gray;
   margin: 0 0 5px 0;
   font-weight: normal;
+}
+.mobile-menu .contact-info .infoItem {
+    margin-bottom: 30px;
 }
 .contact-info a,
 .contact-info p {
@@ -812,7 +827,7 @@ section.innerServices .text ul {
 }
 
 .menu-description {
-  color: #ccc;
+  color: gray;
   line-height: 1.6;
   margin: 30px 0;
   font-size: 14px;
@@ -849,7 +864,7 @@ section.innerServices .text ul {
 .nav-menu a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
   transition: all 0.3s ease;
   display: block;
@@ -914,13 +929,18 @@ section.innerServices .text ul {
   top: 29px;
   transform: rotate(-45deg);
 }
-
+.mainHeader.servicesHeader,
 .mainHeader.menuOpen {
   background: #fff;
 }
+.mainHeader.servicesHeader{
+  border-bottom: 2px solid var(--mainColor);
+}
+.mainHeader.servicesHeader .navbarHeader .logo img,
 .mainHeader.menuOpen .navbarHeader .logo img {
   filter: brightness(0) saturate(100%) invert(27%) sepia(7%) saturate(617%) hue-rotate(55deg) brightness(95%) contrast(90%);
 }
+.mainHeader.servicesHeader .line , 
 .mainHeader.menuOpen .line {
   background-color: var(--mainColor);
 }
@@ -1088,7 +1108,7 @@ section.innerServices .text ul {
 }
 
 .portfolioText {
-  padding-top: 100px;
+  padding-top: 50px;
   display: flex;
 
   flex-wrap: wrap;
@@ -1105,6 +1125,22 @@ section.innerServices .text ul {
 .portfolioText .contact-info .infoItem {
   margin-bottom: 30px;
 }
+section.innerServices.innerPortfolio .portfolioText .contact-info .infoItem{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 0;
+}
+section.innerServices.innerPortfolio .portfolioText .contact-info a,
+section.innerServices.innerPortfolio .portfolioText .contact-info p{
+  font-size: 12px !important;
+}
+section.innerServices.innerPortfolio .portfolioText .contact-info .infoItem img{
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  position: relative;
+  inset: auto;
+}
 .portfolioText .contact-info p {
   margin: 0 !important;
   font-size: 14px !important;
@@ -1115,9 +1151,8 @@ section.innerServices .text ul {
   font-size: 16px;
   color: #ffffff;
   font-weight: 300;
-  width: 100%;
+  width: max-content;
   flex-basis: 100%;
-
   position: relative;
   bottom: 10%;
   left: 5%;
@@ -1205,7 +1240,7 @@ section.nextproject .text {
 }
 
 section.nextproject .text h1 {
-  font-size: 56px;
+  font-size: 48px;
   letter-spacing: -1px;
   color: #4f5c4d;
   font-weight: 500;
@@ -1213,7 +1248,7 @@ section.nextproject .text h1 {
 }
 
 section.nextproject .text p {
-  font-size: 22px;
+  font-size: 16px;
   letter-spacing: 0px;
   color: #4f5c4d;
   margin-bottom: 70px;
@@ -1390,7 +1425,6 @@ section {
 }
 .heroModel .sectionLinkss button.active {
   text-align: right;
-}e;
 }
 .heroModel .sectionLinkss button.active {
   text-align: right;
@@ -1898,7 +1932,7 @@ textarea.form-control {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 25px 55px;
+  padding: 20px 55px;
   transition: 0.3s;
   overflow: hidden;
 }
@@ -1910,6 +1944,12 @@ textarea.form-control {
   background-color: #fff;
   transition: 0.3s ease-out;
 }
+.nextproject .btn-2 span::before{
+  background: var(--mainColor);
+}
+.nextproject .btn span {
+  padding: 15px 50px;
+}
 .btn-2 span {
   color: #fff;
   border: 1px solid #fff;
@@ -1919,7 +1959,9 @@ textarea.form-control {
   color: #4f5c4d;
   transition: 0.2s 0.1s;
 }
-
+.nextproject .btn-2 span:hover {
+  color: #fff !important;
+}
 /* hover-slide-right */
 .btn.hover-slide-right span::before {
   top: 0;
@@ -2461,7 +2503,12 @@ section.innerServices.contactForm form button span {
   text-overflow: ellipsis;
   flex-grow: 1;
 }
-
+.gallery-button-container .btn-2 span {
+    padding: 15px 30px;
+    font-size: 12px !important;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
 /* Responsive adjustments */
 @media (max-width: 1200px) {
   .sliderPortfolio .swiper-container {
@@ -2541,6 +2588,22 @@ section.innerServices.contactForm form button span {
     margin-bottom: 40px;
     position: absolute;
     bottom: 2%;
-    right: 5%;
+    right: 7%;
     z-index: 4;
+}
+.gallery-button-container .btn-2 span {
+    padding: 15px 40px;
+    font-size: 12px !important;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+
+.portfolioInner .mainHeader.fixedHeader{
+  background: #fff;
+}
+.portfolioInner .mainHeader.fixedHeader .line{
+  background: var(--mainColor);
+}
+.portfolioInner .mainHeader.fixedHeader .navbarHeader .logo img {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(7%) saturate(617%) hue-rotate(55deg) brightness(95%) contrast(90%);
 }
