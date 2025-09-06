@@ -198,7 +198,7 @@ body {
   overflow-x: hidden;
       font-family: "POI Carbonic Trial", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 100;
   font-style: normal;
 }
 
@@ -389,13 +389,18 @@ swiper-slide img {
 }
 
 .ourStory p {
-  max-width: 427px;
-  font-size: 18px;
+  font-size: 22px;
   color: #647261;
   text-align: start;
   margin: 0;
   margin-bottom: 20px;
   flex-shrink: 0;
+}
+
+.ourStory .specific-paragraph {
+  max-width: 100%;
+  margin-bottom: 80px;
+
 }
 .ourStory p b {
   color: #4f5c4d;
@@ -557,7 +562,7 @@ section.innerServices.innerPortfolio .text{
   margin-left: 10%;
 }
 section.innerServices .text h1 {
-  font-size: 55px;
+  font-size: 45px;
   letter-spacing: 0px;
   color: #ffffff;
   font-weight: 500;
@@ -567,7 +572,7 @@ section.innerServices .text h1 .highlight {
 }
 
 section.innerServices .text p {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 200;
   letter-spacing: 0px;
   color: #ffffff;
@@ -581,7 +586,7 @@ section.innerServices .spicealText {
   position: absolute;
   bottom: 5%;
   left: 0%;
-  font-size: 34px;
+  font-size: 25px;
   font-weight: 100;
   letter-spacing: -1px;
   color: #ffffff;
@@ -1362,7 +1367,7 @@ section {
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.25);
   z-index: 4;
   height: max-content;
-  width: 60%;
+  width: 50%;
 }
 .heroModel .content {
   height: 0;
@@ -1379,7 +1384,7 @@ section {
   height: 50px;
   width: 100%;
   left: 0;
-  background: var(--mainColor);
+  background: #4f5c4d;
   opacity: 0;
   transition: 0.3s ease;
 }
@@ -1409,20 +1414,18 @@ section {
   background: none;
   border: none;
   outline: none;
-  padding: 20px;
   font-size: 19px;
   letter-spacing: 0px;
   color: #4f5c4d;
-  font-weight: 500;
   text-transform: uppercase;
   width: 100%;
   transition: 0.3s ease;
-  font-weight: 600;
-  padding: 30px;
+  font-weight: 500;
+  padding:20px;
   text-align: center;
 }
 .heroModel .content.active {
-  height: 70vh;
+  height: 60vh;
   opacity: 1;
   visibility: visible;
   padding: 30px;
@@ -1435,6 +1438,8 @@ section {
 }
 .heroModel .sectionLinks button.active {
   text-align: right;
+  padding-top: 60px;
+  padding-right: 100px;
 }
 .heroModel .sectionLinkss button.hide {
   display: none;
@@ -1464,30 +1469,83 @@ section {
 .content-section {
   flex: 0 0 50%;
   display: flex;
-  gap: 30px;
+  gap: 60px;
+  padding-right: 60px;
   flex-direction: column;
+  justify-content: center;
 }
 
-.info-section,
-.form-section {
-  flex: 1;
-}
 .info-section {
-  display: inline-block;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-items-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+}
+
+/* Specific styles for info-items-grid inside ourStory section */
+.ourStory .info-section {
+  margin-bottom: 90px;
+}
+
+.ourStory .info-items-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin: 30px 0;
+}
+
+.ourStory .info-item {
+  margin-bottom: 0;
+}
+
+.ourStory .info-label {
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #939393;
+  margin-bottom: 8px;
+  font-weight: 400;
+
+}
+
+.ourStory .info-value {
+  font-size: 20px;
+  letter-spacing: 0px;
+  color: #535c51;
+  font-weight: 400;
+}
+
+.form-section {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info-section-wrapper {
+  flex: 1;
+
+  display: flex; /* Enable Flexbox */
+  justify-content: start; /* Center horizontally */
+  align-items: start; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  text-align: center; /* Optional: ensure inline-block content aligns properly */
 }
 
 .section-title {
   font-size: 24px;
   letter-spacing: 0px;
   color: #4f5c4d;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 30px;
 }
 
 .info-item {
   margin-bottom: 25px;
-  float: left;
-  width: 50%;
 }
 
 .info-label {
@@ -1632,17 +1690,17 @@ textarea.form-control {
 
 .text-title {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 8px;
-  color: #000;
+  color: #4f5c4d;
   letter-spacing: 0.5px;
 }
 
 .text-content {
-  font-size: 13px;
+  font-size: 17px;
   line-height: 1.7;
-  color: #666;
-  font-weight: 400;
+  color: #4f5c4d;
+  font-weight: 200; 
 }
 .cursor {
   position: fixed;
@@ -1940,9 +1998,9 @@ textarea.form-control {
 }
 .btn span {
   position: relative;
-  display: inline-block;
+  display: table;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
   top: 0;
@@ -1966,6 +2024,13 @@ textarea.form-control {
 .nextproject .btn span {
   padding: 15px 50px;
 }
+.ourStory .btn-2 span::before{
+  background: var(--mainColor);
+}
+.ourStory .btn span {
+  padding: 15px 50px;
+  
+}
 .btn-2 span {
   color: #fff;
   border: 1px solid #fff;
@@ -1978,8 +2043,15 @@ textarea.form-control {
 .nextproject .btn-2 span:hover {
   color: #fff !important;
 }
+.ourStory .btn-2 span:hover {
+  color: #fff !important;
+}
+.ourStory .btn-2 {
+  min-width: 30%;
+}
 /* hover-slide-right */
 .btn.hover-slide-right span::before {
+
   top: 0;
   bottom: 0;
   left: 0;
@@ -2139,12 +2211,14 @@ textarea.form-control {
 
 section.innerServices.contactForm .container {
   justify-content: center;
+  padding-left: 0;
 }
 section.innerServices.contactForm .row {
   max-width: 100%;
   text-align: left;
   color: #fff;
   width: 80%;
+  
 }
 section.innerServices.contactForm form label,
 section.innerServices.contactForm h1 {
