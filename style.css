@@ -259,7 +259,7 @@ swiper-slide img {
   border-color: #fff;
 }
 .mainHeader .navbarHeader .logo img {
-  max-width: 40px;
+  max-width: 45px;
 }
 .hero .slideContent {
   position: absolute;
@@ -312,7 +312,7 @@ swiper-slide img {
   width: 100%;
 }
 .hero .socialIcons a {
-  font-size: 20px;
+  font-size: 25px;
   color: #fff;
 }
 
@@ -322,6 +322,11 @@ swiper-slide img {
   padding-bottom: 400px;
   max-width: 100%;
   margin: 0 auto;
+}
+
+.ourStory.contact-section {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 .ourStory .dots {
   display: flex;
@@ -559,7 +564,7 @@ section.innerServices .text {
   color: #fff;
 }
 section.innerServices.innerPortfolio .text{
-  margin-left: 10%;
+  margin-left: 15%;
 }
 section.innerServices .text h1 {
   font-size: 45px;
@@ -1367,7 +1372,7 @@ section {
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.25);
   z-index: 4;
   height: max-content;
-  width: 50%;
+  width: 60%;
 }
 .heroModel .content {
   height: 0;
@@ -1420,7 +1425,7 @@ section {
   text-transform: uppercase;
   width: 100%;
   transition: 0.3s ease;
-  font-weight: 500;
+  font-weight: 400;
   padding:20px;
   text-align: center;
 }
@@ -1460,7 +1465,8 @@ section {
 
 .logo-section {
   flex: 0 0 50%;
-  padding-left: 20px;
+  /* padding-left: 20px; */
+  padding-bottom: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1689,7 +1695,7 @@ textarea.form-control {
 }
 
 .text-title {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   margin-bottom: 8px;
   color: #4f5c4d;
@@ -1697,7 +1703,7 @@ textarea.form-control {
 }
 
 .text-content {
-  font-size: 17px;
+  font-size: 12px;
   line-height: 1.7;
   color: #4f5c4d;
   font-weight: 200; 
@@ -2019,7 +2025,7 @@ textarea.form-control {
   transition: 0.3s ease-out;
 }
 .nextproject .btn-2 span::before{
-  background: var(--mainColor);
+  background: #535c51;
 }
 .nextproject .btn span {
   padding: 15px 50px;
@@ -2682,10 +2688,10 @@ section.innerServices.contactForm form button span {
     z-index: 4;
 }
 .gallery-button-container .btn-2 span {
-    padding: 15px 40px;
+    padding: 25px 35px;
     font-size: 12px !important;
     letter-spacing: 1px;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .portfolioInner .mainHeader.fixedHeader{
