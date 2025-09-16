@@ -325,7 +325,7 @@ swiper-slide img {
 }
 
 .ourStory.contact-section {
-  padding-top: 50px;
+  padding-top:80px;
   padding-bottom: 0;
 }
 .ourStory .dots {
@@ -792,7 +792,7 @@ section.innerServices .text ul {
 /* Mobile Menu Overlay */
 .mobile-menu {
   position: fixed;
-  top: 95px;
+  top: 80px;
   left: 0;
   width: 100%;
   height: 100vh;
@@ -2048,7 +2048,7 @@ textarea.form-control {
   transition: 0.2s 0.1s;
 }
 .nextproject .btn-2 span:hover {
-  color: #535c51 !important;
+  color: #fff !important;
 }
 .ourStory .btn-2 span:hover {
   color: #fff !important;
