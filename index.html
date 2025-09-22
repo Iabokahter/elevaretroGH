@@ -65,7 +65,7 @@
     <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="logo-container">
-            <div class="logo"><img src="./art/SVG/logowhite.svg" style="width:50px; height: 50px;" alt="logo"></div>
+            <div class="logo"><img src="./art/SVG/logowhite.svg" style="width:50px; height: 35px;" alt="logo"></div>
         </div>
         <!-- <div class="loading-text">Loading...</div> -->
     </div>
@@ -78,8 +78,8 @@
                         <div class="navbarHeader">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="./art/SVG/logowhite.svg" alt="logo" style="width:50px; height: 50px;" >
-                                    <img src="./art/SVG/Asset 5.svg" class="greenLogo" alt="logo" style="width: 50px; height: 50px;">
+                                    <img src="./art/SVG/logowhite.svg" alt="logo" style="width:50px; height: 35px;" >
+                                    <img src="./art/SVG/Asset 5.svg" class="greenLogo" alt="logo" style="width: 50px; height: 35px;">
                                 </a>
                             </div>
                             <div class="menu">
@@ -301,7 +301,7 @@
                         <div class="contact-row">
                             <div class="logo-section">
                                 <div class="logo">
-                                    <img src="./art/SVG/Asset 5.svg" alt="logo" style="color: #4f5c4d; width: 80px; height: 100px;">
+                                    <img src="./art/SVG/Asset 5.svg" alt="logo" style="color: #4f5c4d; width: 45px; height: 100px;">
                                 </div>
                             </div>
 
@@ -313,19 +313,20 @@
 
                                     <div class="info-items-grid">
                                         <div class="info-item">
-                                            <div class="info-label">ADDRESS</div>
+                                            <div class="info-label">Address</div>
                                             <div class="info-value">Jeddah, KSA</div>
                                         </div>
 
                                         <div class="info-item">
-                                            <div class="info-label">PHONE</div>
-                                            <div class="info-value">+966 293 11679</div>
+                                            <div class="info-label">E-mail</div>
+                                            <div class="info-value">elevareero.com</div>
                                         </div>
 
                                         <div class="info-item">
-                                            <div class="info-label">EMAIL</div>
-                                            <div class="info-value">elevareero.com</div>
+                                            <div class="info-label">Phone</div>
+                                            <div class="info-value">+966 293 11679</div>
                                         </div>
+
                                     </div>
 
                                     
@@ -511,10 +512,10 @@
                 window.innerWidth < 768;
         }
 
-        // دالة للسكرول التلقائي (للموبايل فقط)
+        
         function scrollToContent() {
             if (isMobile()) {
-                const scrollDistance = window.innerHeight * 0.5; // 90vh
+                const scrollDistance = window.innerHeight * 0.65; // 90vh
                 window.scrollTo({
                     top: scrollDistance,
                     behavior: 'smooth'
@@ -522,7 +523,7 @@
             }
         }
 
-        // دالة لعرض قسم About
+        
         function showAboutSection() {
             aboutBtn.classList.add('active');
             aboutBtn.classList.remove('hide');
@@ -531,11 +532,11 @@
             aboutSection.classList.add('active');
             contactSection.classList.remove('active');
 
-            // إضافة السكرول للموبايل
+            
             scrollToContent();
         }
 
-        // دالة لعرض قسم Contact
+        
         function showContactSection() {
             contactBtn.classList.add('active');
             contactBtn.classList.remove('hide');
@@ -544,11 +545,11 @@
             contactSection.classList.add('active');
             aboutSection.classList.remove('active');
 
-            // إضافة السكرول للموبايل
+            
             scrollToContent();
         }
 
-        // دالة لإخفاء الأقسام
+        
         function hideSections() {
             aboutBtn.classList.remove('active');
             contactBtn.classList.remove('active');
@@ -558,7 +559,7 @@
             contactBtn.classList.remove('hide');
         }
 
-        // استعمال الدوال مع الكبستين الأصليتين
+        
         aboutBtn.addEventListener('click', () => {
             if (aboutBtn.classList.contains('active')) {
                 hideSections();
@@ -575,7 +576,7 @@
             }
         });
 
-        // استعمال الدوال مع كبستين الهيدر في الهوم بيج
+        
         const aboutHeaderBtn = document.querySelector('.aboutSection');
         const contactHeaderBtn = document.querySelector('.contactSection');
 
@@ -601,7 +602,7 @@
             });
         }
 
-        // فحص URL parameters بدلاً من hash
+        
         window.addEventListener('load', () => {
             const urlParams = new URLSearchParams(window.location.search);
             const section = urlParams.get('section');
@@ -637,9 +638,11 @@
                             once: false
                         });
                     }
-                }, 500); // Wait for fade-out transition
+                }, 500); 
+                
 
-            }, 2000); // 3 seconds delay
+            }, 2000); 
+            
         });
     </script>
 
@@ -654,7 +657,7 @@
         let mouseX = 0, mouseY = 0;
         let cursorX = 0, cursorY = 0;
 
-        // إضافة transition للكورسر في CSS أو هنا
+
         cursor.style.transition = "opacity 0.3s ease, visibility 0.3s ease";
 
         document.addEventListener("mousemove", e => {
@@ -662,13 +665,13 @@
             mouseY = e.clientY;
         });
 
-        // إخفاء الكورسر مع انيميشن
+
         header.addEventListener("mouseenter", () => {
             cursor.style.opacity = "0";
             cursor.style.visibility = "hidden";
         });
 
-        // إظهار الكورسر مع انيميشن
+
         header.addEventListener("mouseleave", () => {
             cursor.style.opacity = "1";
             cursor.style.visibility = "visible";

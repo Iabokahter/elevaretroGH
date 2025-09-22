@@ -227,6 +227,7 @@ swiper-slide img {
   position: absolute;
   width: 100%;
   z-index: 9;
+  
   top: 0;
   left: 0;
   padding: 20px 0;
@@ -804,6 +805,12 @@ section.innerServices .text ul {
   z-index: 9999;
   transform: translateY(-20px);
 }
+
+/* Specific mobile menu positioning for portfolio and services pages */
+.portfolio-page .mobile-menu,
+.services-page .mobile-menu {
+  top: 100px;
+}
 .mobile-menu .contact-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -955,20 +962,26 @@ section.innerServices .text ul {
   top: 29px;
   transform: rotate(-45deg);
 }
-.mainHeader.servicesHeader,
-.mainHeader.menuOpen {
+.mainHeader.servicesHeader {
   background: #fff;
+  border-color: #4f5c4d;
+}
+
+.mainHeader.menuOpen {
+  background: #4f5c4d;
+  border-color: #4f5c4d;
 }
 .mainHeader.servicesHeader{
-  border-bottom: 2px solid var(--mainColor);
+  border-bottom: 1px solid var(--mainColor);
 }
-.mainHeader.servicesHeader .navbarHeader .logo img,
-.mainHeader.menuOpen .navbarHeader .logo img {
-  filter: brightness(0) saturate(100%) invert(27%) sepia(7%) saturate(617%) hue-rotate(55deg) brightness(95%) contrast(90%);
+
+/* Services page specific styles when menu is open */
+.mainHeader.servicesHeader.menuOpen .navbarHeader .logo img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
-.mainHeader.servicesHeader .line , 
-.mainHeader.menuOpen .line {
-  background-color: var(--mainColor);
+
+.mainHeader.servicesHeader.menuOpen .line {
+  background-color: white !important;
 }
 .section-container {
   display: grid;
@@ -1387,7 +1400,7 @@ section {
   content: "";
   position: absolute;
   bottom: 0px;
-  height: 50px;
+  height: 25px;
   width: 100%;
   left: 0;
   background: #4f5c4d;
@@ -1478,6 +1491,7 @@ section {
   display: flex;
   gap: 60px;
   padding-right: 60px;
+  padding-bottom: 10px;
   flex-direction: column;
   justify-content: center;
 }
@@ -1544,10 +1558,10 @@ section {
 }
 
 .section-title {
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 0px;
   color: #4f5c4d;
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 30px;
 }
 
@@ -1563,12 +1577,13 @@ section {
 
 .info-value {
   font-size: 13px;
+  font-weight: 300;
   letter-spacing: 0px;
   color: #4f5c4d;
 }
 
 .form-group {
-  margin-bottom: 25px;
+  margin-bottom: 0px;
 }
 
 .form-row {
@@ -1588,7 +1603,8 @@ section {
   border: none;
   border-bottom: 1px solid #ddd;
   background: transparent;
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: 200;
   color: #333;
   outline: none !important;
   transition: border-color 0.3s ease;
@@ -1602,24 +1618,37 @@ section {
 
 .form-control::placeholder {
   color: #999;
-  font-size: 14px;
+  font-size: 11px;
+  font-weight: 100;
 }
 
 textarea.form-control {
   resize: vertical;
-  min-height: 100px;
-  padding-top: 12px;
+  min-height: 50px;
+
+}
+
+/* Specific styling for textarea form-group */
+.textarea-group {
+  margin-bottom: 15px;
+}
+
+.textarea-group .form-control {
+  min-height: 60px;
+  padding: 8px 0;
 }
 
 .submit-btn {
   background: none;
   border: none;
   color: #333;
+  font-weight: 100;
   font-size: 14px;
   cursor: url("art/1x/Asset 1.png") 16 16, auto;
   padding: 0;
-  text-decoration: underline;
+
   margin-top: 20px;
+  margin-bottom: 20px;
   display: block;
   margin-left: auto;
 }
@@ -2305,6 +2334,13 @@ section.innerServices.contactForm form button span {
   .hideOnMobile {
     display: none;
   }
+  
+  /* Fix for ourStory info-items-grid on mobile */
+  .ourStory .info-items-grid {
+    flex-direction: column;
+    gap: 30px;
+    margin: 20px 0;
+  }
   .mainHeader .navbarHeader .menu ul {
     display: none;
   }
@@ -2701,6 +2737,7 @@ section.innerServices.contactForm form button span {
 .portfolioInner .mainHeader.fixedHeader .line{
   background: var(--mainColor);
 }
+
 .portfolioInner .mainHeader.fixedHeader .navbarHeader .logo img {
     filter: brightness(0) saturate(100%) invert(27%) sepia(7%) saturate(617%) hue-rotate(55deg) brightness(95%) contrast(90%);
 }
