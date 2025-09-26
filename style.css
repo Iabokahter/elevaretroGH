@@ -2805,3 +2805,97 @@ header.mainHeader.companyHeader.companyfixedHeader .line{
 header.mainHeader.companyHeader.companyfixedHeader .logo img{
   filter: unset !important;
 }
+
+/* OUR - CLIENTS Section Styles */
+.ourClients {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.clients-container {
+
+  margin: 0 auto;
+}
+
+.clients-title {
+  font-size: 21px; /* Half of 42px from COMPANY - PHILOSOPHY */
+  letter-spacing: -1px;
+  color: #4f5c4d;
+  font-weight: 200;
+  margin-bottom: 60px;
+
+}
+
+.clients-title b {
+  font-weight: 600;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0; /* Remove gap to allow borders to overlap */
+  width: 100%; /* Take full width of parent container */
+  border-left: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.client-item {
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  aspect-ratio: 1.8; /* Make cells wider and shorter (2.5:1 ratio) */
+  min-height: 80px;
+}
+
+.client-item img {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.client-item:hover img {
+  filter: grayscale(0%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 100%;
+  }
+  
+  .clients-title {
+
+    font-size: 18px;
+  }
+  
+  .client-item {
+    aspect-ratio:12;
+    min-height: 70px;
+    padding: 15px;
+  }
+  
+  .client-item img {
+    max-height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+    width: 100%;
+  }
+  
+  .clients-title {
+    font-size: 16px;
+  }
+}
