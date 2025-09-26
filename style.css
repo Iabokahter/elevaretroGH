@@ -2741,3 +2741,67 @@ section.innerServices.contactForm form button span {
 .portfolioInner .mainHeader.fixedHeader .navbarHeader .logo img {
     filter: brightness(0) saturate(100%) invert(27%) sepia(7%) saturate(617%) hue-rotate(55deg) brightness(95%) contrast(90%);
 }
+
+header.mainHeader.companyHeader{
+  background: #4f5c4d;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+header.mainHeader.companyHeader .line{
+  background-color: #fff !important;
+}
+header.mainHeader.companyHeader .logo img{
+  filter: invert(1) brightness(100);
+}
+
+.companyStory{
+  position: relative;
+  padding-top: 230px;
+  padding-bottom: 230px;
+}
+.companyStory::before{
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  width: 3px;
+  height: 120px;
+  background: #eee;
+  transform: translateX(-50%);
+}
+.companyStory::after{
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 3px;
+  height: 120px;
+  background: #eee;
+  transform: translateX(-50%);
+}
+
+.sliderPortfolio.companySlider .swiper-slide a {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.sliderPortfolio.companySlider .swiper-slide a .image-container{
+  width: 50%;
+}
+
+header.mainHeader.companyHeader.companyfixedHeader {
+    background: #fff;
+    border-bottom: 1px solid var(--mainColor);
+}
+
+header.mainHeader.companyHeader.companyfixedHeader .line{
+  background-color: #4f5c4d !important;
+}
+
+header.mainHeader.companyHeader.companyfixedHeader .logo img{
+  filter: unset !important;
+}
