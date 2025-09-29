@@ -2806,6 +2806,153 @@ header.mainHeader.companyHeader.companyfixedHeader .logo img{
   filter: unset !important;
 }
 
+/* Lorem Section Styles */
+.lorem-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.lorem-content {
+  max-width: 800px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.lorem-content p {
+  font-size: 36px;
+  line-height: 1.8;
+  color: #4f5c4d;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.lorem-content p b {
+  
+  font-weight: 600;
+  
+}
+
+
+@media (max-width: 768px) {
+  .lorem-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 15px;
+  }
+  
+  .lorem-section {
+    padding: 60px 0;
+  }
+}
+
+
+
+
+.lorem-section-center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.lorem-content-center {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.lorem-content-center p {
+  font-size: 42px;
+  line-height: 1.8;
+  color: #BDB9B5;
+  font-weight: 600;
+  margin: 0;
+  padding: 0 20px;
+}
+
+
+@media (max-width: 768px) {
+  .lorem-content-center p {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 15px;
+  }
+  
+  .lorem-section-center {
+    padding: 60px 0;
+  }
+}
+
+
+/* Rectangles Grid between lorem sections */
+.lorem-rectangles {
+  min-height: 100vh;
+  background: #4f5c4d;
+  padding: 40px 0;
+}
+
+.lorem-rectangles .container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.lorem-rectangles .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.lorem-rectangles .col-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.rect-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; /* spacing to reveal page background */
+}
+
+.lorem-rectangles .rect-grid {
+  grid-auto-rows: 1fr;
+}
+
+/* 5 columns on 16:9 (or wider) desktop screens */
+@media (min-aspect-ratio: 16/9) and (min-width: 1200px) {
+  .lorem-rectangles .rect-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.rect-grid .rect {
+  background: #fff; /* rectangles are white so gaps show #4f5c4d */
+  min-height: 325px;
+
+}
+
+@media (max-width: 992px) {
+  .rect-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .rect-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .rect-grid .rect {  
+    min-height: 120px;
+
+  }
+}
+
 /* OUR - CLIENTS Section Styles */
 .ourClients {
   padding: 80px 0;
