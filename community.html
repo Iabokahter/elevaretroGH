@@ -24,24 +24,24 @@
         content="Explore Elevaretro's portfolio of completed architectural projects, interior designs, and construction works.">
     <meta name="twitter:image" content="https://samer7777.github.io/ELEVARETRO/art/1x/Asset%208.png">
 
-    <!-- Meta Tags إضافية -->
+    
     <meta name="description"
         content="Explore Elevaretro's portfolio of completed architectural projects, interior designs, and construction works. Discover our expertise in creating authentic and functional spaces.">
     <meta name="keywords"
         content="elevaretro portfolio, architectural projects, completed works, interior design gallery, construction projects, design showcase, our work">
     <meta name="author" content="Elevaretro">
 
-    <!-- Standard favicon -->
+    
     <link rel="icon" type="image/x-icon" href="images/logo.png">
 
-    <!-- PNG favicon (recommended for better quality) -->
+    
     <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png">
 
-    <!-- Apple touch icon (for iOS devices) -->
+    
     <link rel="apple-touch-icon" sizes="180x180" href="images/logo.png">
 
-    <!-- Android/Chrome -->
+    
     <link rel="manifest" href="images/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,8 +78,7 @@
             </div>
         </div>
     </header>
-
-    <!-- Mobile Menu -->
+    
     <div class="mobile-menu" id="mobileMenu">
         <div class="menu-content">
             <div class="menu-left">
@@ -111,18 +110,17 @@
             <div class="menu-right">
                 <nav>
                     <ul class="nav-menu">
-                        <li><a href="./index.html">ABOUT</a></li>
+                        <li><a href="./company.html">ABOUT</a></li>
                         <li><a href="./services.html">SERVICES</a></li>
                         <li><a href="./portfolio.html">PORTFOLIO</a></li>
-                        <li><a href="./index.html">COMMUNITY</a></li>
+                        <li><a href="./community.html">COMMUNITY</a></li>
                         <li><a href="./contact.html">CONTACT US</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </div>
-
-    <!-- Lorem Text Section -->
+    
     <section class="lorem-section">
         <div class="container">
             <div class="row">
@@ -194,7 +192,74 @@ united by design, driven by collaboration,<br>
                     <h2 class="bold">We’re a vibe</h2>
                 </div>
                 <div class="lrb-image" data-aos="fade-left" data-aos-delay="200">
-                    <img src="images/placeholder.jpg" alt="Project showcase">
+                    <img src="art/community/efdvfdcac-01.png" alt="Project showcase">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="lorem-right-block">
+        <div class="container">
+            <div class="lrb-wrap">
+                <div class="lrb-text" data-aos="fade-up" data-aos-delay="100">
+                    <h2>From check-ins to checklists</h2>
+                    <h2 class="bold">we’ve mastered the art of airport meetings</h2>
+                </div>
+                <div class="lrb-image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="art/community/efdvfdcac-02.png" alt="Project showcase">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="lorem-right-block">
+        <div class="container">
+            <div class="lrb-wrap">
+                <div class="lrb-text" data-aos="fade-up" data-aos-delay="100">
+                    <h2>We've shakenup so many ideas over cocktails that we re starting to think</h2>
+                    <h2 class="bold">the shaker deserves a raise .</h2>
+                </div>
+                <div class="lrb-image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="art/community/efdvfdcac-03.png" alt="Project showcase">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="lorem-right-block">
+        <div class="container">
+            <div class="lrb-wrap">
+                <div class="lrb-text" data-aos="fade-up" data-aos-delay="100">
+                    <h2>We don’t just build sites, we serve </h2>
+                    <h2 class="bold">looks on them.</h2>
+                </div>
+                <div class="lrb-image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="art/community/efdvfdcac-06.png" alt="Project showcase">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="lorem-right-block">
+        <div class="container">
+            <div class="lrb-wrap">
+                <div class="lrb-text" data-aos="fade-up" data-aos-delay="100">
+                    <h2>Weve ordered so much coffee during late night brainstorms </h2>
+                    <h2 class="bold">we re thinking of launching a coffee consultant branch.</h2>
+                </div>
+                <div class="lrb-image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="art/community/efdvfdcac-05.png" alt="Project showcase">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="lorem-right-block">
+        <div class="container">
+            <div class="lrb-wrap">
+                <div class="lrb-text" data-aos="fade-up" data-aos-delay="100">
+                    <h2>Weve flown to so many meetings,
+                        our frequent flyer miles are strating</h2>
+                    <h2 class="bold">to look more impressive than our
+                        bank accoun</h2>
+                </div>
+                <div class="lrb-image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="art/community/efdvfdcac-04.png" alt="Project showcase">
                 </div>
             </div>
         </div>
@@ -334,25 +399,56 @@ window.addEventListener("resize", () => debouncer.restart(true));
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // إعادة تهيئة AOS
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mainHeader = document.querySelector('.mainHeader');
+
+
+        hamburgerBtn.addEventListener('click', function () {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+
+            
+            if (mainHeader) {
+                mainHeader.classList.toggle('menuOpen');
+            }
+        });
+        
+        mobileMenu.addEventListener('click', function (event) {
+            if (event.target === mobileMenu) {
+                hamburgerBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+
+                
+                if (mainHeader) {
+                    mainHeader.classList.remove('menuOpen');
+                }
+            }
+        });
+        
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                hamburgerBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+
+                // Remove menuOpen class when closing
+                if (mainHeader) {
+                    mainHeader.classList.remove('menuOpen');
+                }
+            }
+        });
+        
         AOS.refresh();
 
-        // أو إعادة تهيئة كاملة
+
         AOS.init({
             duration: 1000,
-            once: false, // يسمح بالتكرار
-            offset: 50   // المسافة قبل تشغيل الأنيميشن
+            once: false, 
+            offset: 50   
         });
-
-        // إعادة تحديث عند السكرول
         window.addEventListener('scroll', function () {
             AOS.refresh();
         });
-
-        
-        
-
-        
         document.addEventListener("DOMContentLoaded", function () {
             const mainHeader = document.querySelector(".mainHeader");
             const mobileMenu = document.getElementById('mobileMenu');
@@ -371,6 +467,7 @@ window.addEventListener("resize", () => debouncer.restart(true));
             });
         });
     </script>
+
 </body>
 
 </html>
